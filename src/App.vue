@@ -5,12 +5,24 @@ import ContactUs from './components/ContactUs.vue'
 import Header from './components/Header.vue';
 import Title from './components/Title.vue';
 import Data from './components/Data.vue';
+import Banner from './components/Banner.vue';
+import pictureItro from './components/PictureIntro.vue';
+import BigInfo from './components/BigInfo.vue';
 </script>
 
 <template>
   <div class="body">
     <div class="header">
       <Header />
+    </div>
+    <div class="banner">
+      <Banner />
+    </div>
+    <div class="bigInfo">
+      <BigInfo />
+    </div>
+    <div class="pictureIntro">
+      <pictureItro />
     </div>
     <div class="title">
       <Title />
@@ -35,10 +47,21 @@ import Data from './components/Data.vue';
 .body {
   margin: 0 auto;
 }
-
 .header {
   width: 100vw;
   height: 7.87vh;
+}
+.banner{
+  width: 100vw;
+  height: 60vh;
+}
+.bigInfo{
+  width: 100vw;
+  height: 70vh;
+}
+.pictureIntro{
+  width: 100vw;
+  height: 80vh;
 }
 .title{
   width: 12.66vw;
@@ -52,7 +75,6 @@ import Data from './components/Data.vue';
   width: 100vw;
   height: 80vh;
 }
-
 .contactUs {
   height: 40vh;
   width: 100vw;
