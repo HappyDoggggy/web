@@ -3,36 +3,39 @@
 </script>
 
 <template>
-    <div class="photo">
-        <div class="text">
-            <h2>お客様に感動を提供し、</h2>
-            <h2>社会の発展に貢献</h2>
-        </div>
+    <div class="picture">
+        <img class="picture_banner" src="../../public/istockphoto-1328151393-1024x1024.jpg" alt="">
+        <h2 class="one text">お客様に感動を提供し、</h2>
+        <h2 class="two text">社会の発展に貢献</h2>
     </div>
 </template>
 
 <style scoped lang="scss">
-.photo {
+.picture {
     width: 100%;
-    height: 100%;
-    background-color: green;
-    background-image: url(../../public/istockphoto-1328151393-1024x1024.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0% 80%;
-    .text{
-        width: 30vw;
-        height: 10vw;
-        // background-color: aquamarine;
-        box-sizing: border-box;
-        padding-top: 23%;
-        padding-left: 5%;
-        h2{
-            text-decoration: underline;
-            font-size: 25pt;
-            color: white;
-            margin-top: 2%;
-        }
+    height: 120%;
+    position: relative;
+
+    .picture_banner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .text {
+        text-decoration: underline;
+        font-size: 2.1rem;
+        position: absolute;
+        color: white;
+    }
+
+    .one {
+        bottom: 17%;
+        left: 5%;
+    }
+
+    .two {
+        bottom: 7%;
+        left: 5%;
     }
 }
 </style>

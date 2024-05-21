@@ -3,36 +3,37 @@
 </script>
 
 <template>
-    <div class="main">
-        <div class="logo">
+    <div class="header_main">
+        <div class="header_logo">
         </div>
-        <div class="info">
-            <div class="infoUp">
-                <div class="infoUpText"> 東京都豊島区北大塚２ー１２ー８　大星ビル5F　　法務・留学・有料職業紹介・特定技能・不動産業務</div>
+        <div class="header_info">
+            <div class="header_info_block">
+                <span class="address">東京都豊島区北大塚２ー１２ー８　大星ビル5F　　</span>
+                <span class="content">法務・留学・有料職業紹介・特定技能・不動産業務</span>
             </div>
-            <div class="infoDown">
-                <div class="infoDownArea">
-                    <div class="home area">ホーム</div>
-                    <div class="company area">会社案内</div>
-                    <div class="law area">法務と行政書士</div>
-                    <div class="building area">不動産</div>
-                    <div class="visa area">ビザサービズ</div>
+            <div class="info_link">
+                <div class="info_link_block">
+                    <a href="" class="home link">ホーム</a>
+                    <a href="" class="company link">会社案内</a>
+                    <a href="" class="law link">法務と行政書士</a>
+                    <a href="" class="building link">不動産</a>
+                    <a href="" class="visa link">ビザサービズ</a>
                 </div>
             </div>
         </div>
         <div class="mail">
-            <i class="fa-solid fa-envelope"></i>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
-.main {
+.header_main {
     width: 100%;
     height: 100%;
     display: flex;
 
-    .logo {
+    .header_logo {
         width: 13%;
         height: 100%;
         background-image: url(../../public/LOGO.png);
@@ -40,35 +41,41 @@
 
     }
 
-    .info {
+    .header_info {
         width: 86%;
         height: 100%;
         background-color: #FDFDFD;
 
-        .infoUp {
+        .header_info_block {
             width: 100%;
             height: 50%;
+            display: flex;
 
-            .infoUpText {
+            .address {
                 margin-top: 0.5%;
+                margin-left: 61%;
                 font-weight: bold;
-                font-size: 7pt;
-                display: flex;
-                justify-content: right;
-                margin-right: 3%;
+                font-size: 0.6rem;
+            }
+
+            .content {
+                margin-top: 0.5%;
+                
+                font-weight: bold;
+                font-size: 0.6rem;
             }
         }
 
-        .infoDown {
+        .info_link {
             width: 100%;
             height: 50%;
             margin-top: -0.6%;
 
-            .infoDownArea {
+            .info_link_block {
                 display: flex;
                 justify-content: right;
 
-                .area {
+                .link {
                     font-size: 11pt;
                     margin-right: 3%;
                     font-weight: bold;

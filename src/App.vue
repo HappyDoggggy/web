@@ -4,10 +4,14 @@ import Footer from './components/Footer.vue'
 import ContactUs from './components/ContactUs.vue'
 import Header from './components/Header.vue';
 import Title from './components/Title.vue';
-import Data from './components/Data.vue';
+import Analytics from './components/Analytics.vue';
 import Banner from './components/Banner.vue';
-import pictureItro from './components/PictureIntro.vue';
-import BigInfo from './components/BigInfo.vue';
+import PictureIntro from './components/PictureIntro.vue';
+import MainInfo from './components/MainInfo.vue';
+import ServiceIcon from './components/ServiceIcon.vue';
+import ServiceInfo from './components/ServiceInfo.vue';
+import Wechat from './components/Wechat.vue';
+import HomeBanner from './components/HomeBanner.vue';
 </script>
 
 <template>
@@ -15,24 +19,33 @@ import BigInfo from './components/BigInfo.vue';
     <div class="header">
       <Header />
     </div>
+    <div class="homeBanner">
+      <HomeBanner />
+    </div>
     <div class="banner">
       <Banner />
     </div>
-    <div class="bigInfo">
-      <BigInfo />
+    <div class="mainInfo">
+      <MainInfo />
     </div>
     <div class="pictureIntro">
-      <pictureItro />
+      <PictureIntro />
+    </div>
+    <div class="serviceInfo">
+      <ServiceInfo />
     </div>
     <div class="title">
       <Title />
     </div>
-    <div class="data">
-      <Data />
+    <div class="analytics">
+      <Analytics />
     </div>
-    <!-- <div class="content">
-      <RouterView />
-    </div> -->
+    <div class="serviceIcon">
+      <ServiceIcon />
+    </div>
+    <div class="wechat">
+      <Wechat />
+    </div>
     <div class="contactUs">
       <ContactUs />
     </div>
@@ -47,36 +60,64 @@ import BigInfo from './components/BigInfo.vue';
 .body {
   margin: 0 auto;
 }
+
 .header {
   width: 100vw;
   height: 7.87vh;
 }
-.banner{
+
+.homeBanner{
+  width: 100vw;
+  height: 150vh;
+}
+
+.banner {
   width: 100vw;
   height: 60vh;
 }
-.bigInfo{
+
+.mainInfo {
   width: 100vw;
   height: 70vh;
 }
-.pictureIntro{
+
+.pictureIntro {
   width: 100vw;
   height: 80vh;
 }
-.title{
+
+.serviceInfo {
+  width: 100vw;
+  height: 30vh;
+}
+
+.title {
   width: 12.66vw;
   height: 5.8vh;
 }
-.data{
+
+.data {
   width: 15.52vw;
   height: 12.96vh;
 }
-.footer {
+
+.serviceIcon {
   width: 100vw;
-  height: 80vh;
+  height: 60vh;
 }
+
+.wechat {
+  width: 100vw;
+  height: 60vh;
+}
+
 .contactUs {
   height: 40vh;
   width: 100vw;
+}
+
+.footer {
+  width: 100vw;
+  height: 80vh;
 }
 </style>

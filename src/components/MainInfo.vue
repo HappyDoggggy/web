@@ -2,16 +2,15 @@
 </script>
 
 <template>
-    <div class="main">
-        <div class="circleArea">
+    <div class="mainInfo_main">
+        <div class="circle_block">
             <div class="circle">
                 <div class="textArea">
-                    <div class="mainText">ABOUT　US</div>
-                    <div class="subText">会社案内</div>
+                    <div class="mainInfo_text">ABOUT　US</div>
+                    <div class="mainInfo_subText">会社案内</div>
                 </div>
             </div>
         </div>
-        <div class="line"></div>
         <div class="mainIntro">
             <p class="mainIntroP 1">お客様のニーズをよく理解しており、</p>
             <p class="mainIntroP 2">お客様をより早く日本の社会に溶け込ませように頑張ります。</p>
@@ -24,12 +23,12 @@
 </template>
 
 <style scoped lang="scss">
-.main {
+.mainInfo_main {
     width: 100%;
     height: 100%;
     position: relative;
 
-    .circleArea {
+    .circle_block {
         width: 100%;
         height: 70%;
         display: flex;
@@ -42,7 +41,9 @@
             border-radius: 100%;
             display: flex;
             justify-content: center;
-            z-index: 3;
+            align-items: center;
+            position: relative;
+            // z-index: 3;
 
             .textArea {
                 width: 50%;
@@ -50,7 +51,7 @@
                 margin-top: 60%;
                 margin-left: 3.5%;
 
-                .mainText {
+                .mainInfo_text {
                     width: 100%;
                     height: 45%;
                     font-size: 23pt;
@@ -58,7 +59,7 @@
                     margin-left: 5%;
                 }
 
-                .subText {
+                .mainInfo_subText {
                     width: 25%;
                     height: 15%;
                     font-size: 10pt;
@@ -68,33 +69,35 @@
             }
 
         }
-    }
-
-    .line {
-        width: 0.05%;
-        height: 13%;
-        background-color: #BAA97D;
-        margin-left: 50%;
-        z-index: 4;
-        position: absolute;
-        bottom: 23%;
+        .circle::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 23%;
+                background-color:#BAA97D;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -14%;
+            }
     }
 
     .mainIntro {
-        margin-top: 3%;
+        margin-top: 5%;
         width: 100%;
         height: 13%;
         text-align: center;
+
         .mainIntroP {
             font-size: 10pt;
             font-weight: bold;
         }
     }
-    
+
     .subIntro {
         width: 100%;
         height: 20%;
         text-align: center;
+
         .subIntro {
             font-size: 8pt;
         }
