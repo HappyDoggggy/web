@@ -12,12 +12,20 @@ import ServiceIcon from './components/ServiceIcon.vue';
 import ServiceInfo from './components/ServiceInfo.vue';
 import Wechat from './components/Wechat.vue';
 import HomeBanner from './components/HomeBanner.vue';
+import Outline from './components/Outline.vue';
+import History from './components/History.vue';
+import RealEstateIcon from './components/RealEstateIcon.vue';
+import News from './components/News.vue';
+import Inquiry from './components/Inquiry.vue';
 </script>
 
 <template>
   <div class="body">
     <div class="header">
       <Header />
+    </div>
+    <div class="content">
+      <RouterView />
     </div>
     <div class="homeBanner">
       <HomeBanner />
@@ -34,6 +42,12 @@ import HomeBanner from './components/HomeBanner.vue';
     <div class="serviceInfo">
       <ServiceInfo />
     </div>
+    <div class="outline">
+      <Outline />
+    </div>
+    <div class="history">
+      <History />
+    </div>
     <div class="title">
       <Title />
     </div>
@@ -46,8 +60,17 @@ import HomeBanner from './components/HomeBanner.vue';
     <div class="wechat">
       <Wechat />
     </div>
+    <div class="news">
+      <News />
+    </div>
+    <div class="inquiry">
+      <Inquiry />
+    </div>
     <div class="contactUs">
       <ContactUs />
+    </div>
+    <div class="realEstateIcon">
+      <RealEstateIcon />
     </div>
     <div class="footer">
       <Footer />
@@ -66,7 +89,7 @@ import HomeBanner from './components/HomeBanner.vue';
   height: 7.87vh;
 }
 
-.homeBanner{
+.homeBanner {
   width: 100vw;
   height: 150vh;
 }
@@ -91,6 +114,16 @@ import HomeBanner from './components/HomeBanner.vue';
   height: 30vh;
 }
 
+.outline {
+  width: 100vw;
+  height: 70vh;
+}
+
+.history {
+  width: 100vw;
+  height: 60vh;
+}
+
 .title {
   width: 12.66vw;
   height: 5.8vh;
@@ -111,9 +144,24 @@ import HomeBanner from './components/HomeBanner.vue';
   height: 60vh;
 }
 
-.contactUs {
-  height: 40vh;
+.news{
   width: 100vw;
+  height: 50vh ;
+}
+
+.inquiry{
+  width: 100vw;
+  height: 100vh ;
+}
+
+.contactUs {
+  width: 100vw;
+  height: 40vh;
+}
+
+.realEstateIcon {
+  width: 100vw;
+  height: 40vh;
 }
 
 .footer {
