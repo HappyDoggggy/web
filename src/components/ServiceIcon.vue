@@ -32,6 +32,7 @@
 
 <style scoped lang="scss">
 .service {
+    background-color: #131840;
     width: 100%;
     height: 100%;
 
@@ -40,7 +41,7 @@
         height: 30%;
         background-color: #131840;
         box-sizing: border-box;
-        padding-top: 2.5%;
+        padding-top: 5%;
 
         .text {
             text-align: center;
@@ -78,6 +79,7 @@
                 height: 300px;
                 background-color: white;
                 border-radius: 50%;
+                margin-bottom: 20%;
             }
 
             .left {

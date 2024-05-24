@@ -33,6 +33,6 @@ const router = createRouter({
       component: () => import('../views/Visa.vue')
     },
   ]
-})
+});
 
 export default router

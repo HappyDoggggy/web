@@ -36,7 +36,7 @@
     .outline_title {
         position: absolute;
         margin-top: 4.5%;
-        margin-left: 13%;
+        margin-left: 8%;
 
         .outline_title_eng {
             color: white;
@@ -56,7 +56,7 @@
 
     .outline_content_one {
         position: absolute;
-        margin-left: 28%;
+        margin-left: 20%;
 
         .p {
             color: #BAA97D;
@@ -129,7 +129,7 @@
 
     .outline_content_two {
         position: absolute;
-        margin-left: 45%;
+        margin-left: 37%;
 
         .p {
             color: white;

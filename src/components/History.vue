@@ -29,7 +29,7 @@
 
     .history_title {
         position: absolute;
-        margin-left: 13%;
+        margin-left: 8%;
         margin-top: 5%;
 
         .history_title_eng {
@@ -40,7 +40,7 @@
 
     .history_time {
         position: absolute;
-        margin-left: 28%;
+        margin-left: 20%;
         margin-top: 5%;
 
         .time {
@@ -116,7 +116,7 @@
 
     .history_text {
         position: absolute;
-        margin-left: 43%;
+        margin-left: 33%;
         margin-top: 4.5%;
 
         .text {

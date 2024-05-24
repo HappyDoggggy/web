@@ -1,14 +1,31 @@
 <script>
+export default {
+    name: 'Analytics',
+    props: {
+        analytics_title: {
+            type: String,
+            required: true
+        },
+        analytics_data: {
+            type: Number,
+            required: true
+        },
+        analytics_unit: {
+            type: String,
+            required: true
+        },
+    }
+}
 </script>
 
 <template>
     <div class="analytics_block">
-        <div class="analytics_title">問合人数</div>
+        <div class="analytics_title">{{this.analytics_title}}</div>
         <div class="analytics_title_en">ESTATE</div>
         <div class="analytics_data_block">
-            <div class="analytics_data">2982</div>
+            <div class="analytics_data">{{this.analytics_data}}</div>
             <div class="analytics_unit_block">
-                <div class="analytics_unit">人</div>
+                <div class="analytics_unit">{{ this.analytics_unit }}</div>
                 <div class="analytics_unit_up">up</div>
             </div>
         </div>

@@ -31,6 +31,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+
     &::before {
         content: '';
         position: absolute;
@@ -39,9 +40,10 @@
         width: 0.1%;
         height: 20%;
         background-color: #BAA97D;
-        z-index: 1; 
-        
+        z-index: 1;
+
     }
+
     .homeBanner_main_block {
         width: 100%;
         height: 15%;
@@ -125,10 +127,12 @@
         display: flex;
         margin-top: 15%;
         margin-left: 50%;
+
         .homeBanner_link_text_block {
             .homeBanner_link_text {
                 font-weight: bold;
             }
+
             .homeBanner_link_text_en {
                 margin-top: 6%;
                 font-weight: bold;

@@ -1,22 +1,36 @@
 <script>
-
+export default {
+    name: 'Banner',
+    props: {
+        imgSrc: {
+            type: String,
+            required: true
+        },
+        textOne: {
+            type: String,
+            required: true
+        },
+        textTwo: {
+            type: String,
+            required: true
+        }
+    }
+}
 </script>
 
 <template>
-    <div class="picture">
-        <img class="picture_banner" src="../../public/istockphoto-1328151393-1024x1024.jpg" alt="">
-        <h2 class="one text">お客様に感動を提供し、</h2>
-        <h2 class="two text">社会の発展に貢献</h2>
+    <div class="banner">
+        <img class="banner_picture" :src="imgSrc" alt="" >
+        <h2 class="one text">{{ this.textOne }}</h2>
+        <h2 class="two text">{{ this.textTwo }}</h2>
     </div>
 </template>
 
 <style scoped lang="scss">
-.picture {
-    width: 100%;
-    height: 120%;
+.banner {
     position: relative;
 
-    .picture_banner {
+    .banner_picture {
         width: 100%;
         height: 100%;
     }

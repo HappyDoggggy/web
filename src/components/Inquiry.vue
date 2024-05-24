@@ -51,8 +51,6 @@
 
 <style scoped lang="scss">
 .inquiry_main {
-    width: 100%;
-    height: 100%;
     background-color: #F6F6F6;
     padding-top: 5%;
     box-sizing: border-box;
@@ -206,8 +204,9 @@
             background-color: #131840;
             color: #fff;
             border-radius: 2pt;
-            margin-top: 5%;
+            margin-top: 10%;
             margin-left: 35%;
+            margin-bottom: 10%;
         }
 
     }

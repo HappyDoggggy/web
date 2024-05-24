@@ -1,34 +1,49 @@
 <script>
+export default {
+    name: 'ServiceInfo',
+    props: {
+        serviceInfo_title_h2: {
+            type: String,
+            required: true
+        },
+        serviceInfo_title_p: {
+            type: String,
+            required: true
+        },
+        serviceInfo_content_p: {
+            type: String,
+            required: true
+        },
+    }
+}
 </script>
 
 <template>
     <div class="serviceInfo">
         <div class="serviceInfo_title">
-            <h2 class="serviceInfo_title_h2">法務とビザの専門家</h2>
-            <p class="serviceInfo_title_p">Professional</p>
+            <h2 class="serviceInfo_title_h2">{{ this.serviceInfo_title_h2 }}</h2>
+            <p class="serviceInfo_title_p">{{ this.serviceInfo_title_p }}</p>
         </div>
         <div class="serviceInfo_content">
-            <p class="serviceInfo_content_p">ニーズにお応え、プロの経験から提案し、より効率的に解決できます。</p>
+            <p class="serviceInfo_content_p">{{ this.serviceInfo_content_p }}</p>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
 .serviceInfo {
-    margin-top: 12%;
-    box-sizing: border-box;
-    padding-left: 22%;
     position: relative;
+    margin-right: 22%;
 
     .serviceInfo_title::before {
         content: "";
         position: absolute;
         width: 2px;
-        height: 39%;
+        height: 100%;
         background-color: #BAA97D;
-        left: 19.5%;
+        left: -10%;
+        bottom: 4%;
         transform: translateX(-50%);
-        top: 0%;
     }
 
     .serviceInfo_title{
@@ -40,5 +55,6 @@
     .serviceInfo_content{
         margin: 0 auto;
     }
+    
 }
 </style>
