@@ -40,6 +40,7 @@
         background-color: #131840;
         z-index: 1;
     }
+
     &::after {
         content: '';
         position: absolute;
@@ -79,6 +80,11 @@
         .info {
             font-size: 1rem;
             margin-bottom: 3%;
+            color: black;
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 

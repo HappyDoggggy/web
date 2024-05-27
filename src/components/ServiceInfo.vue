@@ -34,6 +34,7 @@ export default {
 .serviceInfo {
     position: relative;
     margin-right: 22%;
+    height: 12vh;
 
     .serviceInfo_title::before {
         content: "";
@@ -47,12 +48,14 @@ export default {
     }
 
     .serviceInfo_title{
+        width: 31vw;
         margin-bottom: 2%;
         .serviceInfo_title_h2{
             font-size: 1.4rem;
         }
     }
     .serviceInfo_content{
+        width: 31vw;
         margin: 0 auto;
     }
     

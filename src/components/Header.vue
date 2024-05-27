@@ -24,11 +24,11 @@ export default {
             </div>
             <div class="info_link">
                 <div class="info_link_block">
-                    <a href="" class="home link">ホーム</a>
-                    <a href="" class="company link">会社案内</a>
-                    <a href="" class="law link">法務と行政書士</a>
-                    <a href="" class="building link">不動産</a>
-                    <a href="" class="visa link">ビザサービズ</a>
+                    <RouterLink to="/" class="link">ホーム</RouterLink>
+                    <RouterLink to="/AboutUs" class="link">会社案内</RouterLink>
+                    <RouterLink to="/Scrivener" class="link">法務と行政書士</RouterLink>
+                    <RouterLink to="/RealEstate" class="link">不動産</RouterLink>
+                    <RouterLink to="/Visa" class="link">ビザサービズ</RouterLink>
                 </div>
             </div>
         </div>
@@ -90,6 +90,8 @@ export default {
                     font-size: 11pt;
                     margin-right: 3%;
                     font-weight: bold;
+                    color: black;
+                    text-decoration: none; 
                 }
             }
         }

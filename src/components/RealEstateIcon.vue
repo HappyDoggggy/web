@@ -3,10 +3,6 @@
 
 <template>
     <div class="realEstateIcon">
-        <div class="realEstateIcon_title">
-            <h1 class="realEstateIcon_title_eng">SERVICE</h1>
-            <p class="realEstateIcon_title_jap">不動産業務サービス</p>
-        </div>
         <div class="realEstateIcon_picture">
             <div class="realEstateIcon_picture_1 picture">
                 <img src="../../public/building1.jpg" alt="">
@@ -30,18 +26,6 @@
 
 <style scoped lang="scss">
 .realEstateIcon {
-    .realEstateIcon_title{
-        margin-top: 5%;
-        margin-bottom: 5%;
-        margin-left: 21%;
-        .realEstateIcon_title_eng{
-            color: #131840;
-            margin-bottom: 2%;
-        }
-        .realEstateIcon_title_jap{
-            color: #131840;
-        }
-    }
     .realEstateIcon_picture {
         margin-left: 20%;
         display: flex;

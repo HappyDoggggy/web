@@ -1,17 +1,42 @@
 <script>
+export default {
+    name: 'PictureIntro',
+    props: {
+        imgSrc: {
+            type: String,
+            required: true
+        },
+        textOne: {
+            type: String,
+            required: true
+        },
+        textTwo: {
+            type: String,
+            required: true
+        },
+        textThree: {
+            type: String,
+            required: true
+        },
+        textFour: {
+            type: String,
+            required: true
+        }
+    }
+}
 </script>
 
 <template>
 <div class="content">
-    <img class="content_picture" src="../../public/istockphoto-1339197512-1024x1024.jpg" alt="">
+    <img class="content_picture" :src="imgSrc" alt="">
     <div class="content_text">
         <div class="content_text_title">
-            <h2 class="content_text_title_h2">法務</h2>
-            <h3 class="content_text_title_h3">LEGAL AFFAIRS</h3>
+            <h2 class="content_text_title_h2">{{ this.textOne }}</h2>
+            <h3 class="content_text_title_h3">{{ this.textTwo }}</h3>
         </div>
         <div class="content_text_intro">
-            <p class="content_text_intro_p1">弊社と提携する学院は多所があり、学生に豊富なコースが選択できます。日本語学校を卒業後、学生自身の状況に応じた様々な進路を推薦します。</p>
-            <p class="content_text_intro_p2">日本語学校が修了後、大学に落ちた留学生を提携大学への入学を推薦します。</p>
+            <p class="content_text_intro_p1">{{ this.textThree }}</p>
+            <p class="content_text_intro_p2">{{ this.textFour }}</p>
         </div>
     </div>
 </div>
