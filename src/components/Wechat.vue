@@ -26,8 +26,14 @@
     background-color: #F5F5F5;
     display: flex;
     justify-content: center;
+    align-items: center;
     .wechat_content{
         margin-top: 10%;
+        width: 50%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .wechat_content_text{
             .wechat_content_text_p1{
                 font-size: 2rem;
@@ -70,11 +76,13 @@
         }
     }
     .wechat_picture{
+        display: flex;
+        align-items: flex-end;
+        width: 50%;
+        height: 100%;
         .phone{
-            width: 90%;
+            width: 80%;
             height: 80%;
-            margin-left: 30%;
-            margin-top: 18%;
         }
     }
 }

@@ -6,7 +6,7 @@
     <div class="contact">
         <h1 class="contact_title">CONTACT US</h1>
         <h2 class="contact_text">ご依頼、ご相談などお気軽にお問い合わせください。</h2>
-        <button class="contact_button">お問い合わせ</button>
+        <button class="contact_button" type="button">お問い合わせ</button>
     </div>
 </template>
 
@@ -16,6 +16,7 @@
     width: 100%;
     background-color: #131840;
     position: relative;
+    text-align: center;
 
         .contact_title {
             color: white;
@@ -37,7 +38,6 @@
         .contact_text {
             color: white;
             margin-top: 80px;
-            margin-left: 30%;
         }
 
         .contact_button {
@@ -48,7 +48,6 @@
             border: 0px;
             color: white;
             margin-top: 45px;
-            margin-left: 45%;
         }
 }
 </style>

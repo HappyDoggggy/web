@@ -64,12 +64,12 @@
 
         .inquiry_title_text {
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
         }
 
         .inquiry_title_text_en {
             color: #BAA97D;
-            font-size: 0.7rem;
+            font-size: 1.1rem;
         }
     }
 
@@ -83,7 +83,7 @@
             margin-top: 3%;
 
             .inquiry_form_content {
-                font-size: 0.8rem;
+                font-size: 1.1rem;
             }
 
             .inquiry_form_content_select {
@@ -98,7 +98,7 @@
             margin-top: 3%;
 
             .inquiry_form_name {
-                font-size: 0.8rem;
+                font-size: 1.1rem;
             }
 
             .surname {
@@ -129,12 +129,12 @@
 
             .singleChoice_phone {
                 margin-left: 1%;
-                font-size: 0.8rem;
+                font-size: 1.1rem;
             }
 
             .singleChoice_mail {
                 margin-left: 1%;
-                font-size: 0.8rem;
+                font-size: 1.1rem;
             }
         }
 
@@ -142,7 +142,7 @@
             margin-top: 3%;
 
             .inquiry_form_phone {
-                font-size: 0.8rem;
+                font-size: 1.1rem;
             }
 
             .inquiry_form_namber_text {
@@ -157,7 +157,7 @@
             margin-top: 3%;
 
             .inquiry_form_mail {
-                font-size: 0.8rem;
+                font-size: 1.1rem;
             }
 
             .inquiry_form_mail_text {
@@ -172,7 +172,7 @@
             margin-top: 3%;
 
             .inquiry_form_mail_check {
-                font-size: 0.8rem;
+                font-size: 1.1rem;
             }
 
             .inquiry_form_mail_check_text {
@@ -187,7 +187,7 @@
             margin-top: 3%;
 
             .inquiry_form_message {
-                font-size: 0.8rem;
+                font-size: 1.1rem;
             }
 
             .inquiry_form_message_text {
@@ -200,13 +200,14 @@
 
         .submitBtn {
             width: 20%;
-            height: 35px;
+            height: 40px;
             background-color: #131840;
             color: #fff;
             border-radius: 2pt;
             margin-top: 10%;
             margin-left: 35%;
             margin-bottom: 10%;
+            font-size: 1rem;
         }
 
     }

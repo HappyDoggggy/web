@@ -33,7 +33,7 @@
     &::before {
         content: '';
         position: absolute;
-        top: 48%;
+        top: 46%;
         left: 33%;
         width: 45%;
         height: 0.5%;
@@ -44,7 +44,7 @@
     &::after {
         content: '';
         position: absolute;
-        top: 73%;
+        top: 71%;
         left: 33%;
         width: 45%;
         height: 0.5%;
@@ -59,7 +59,7 @@
         margin-left: 10%;
 
         .news_text {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: bold;
         }
     }
@@ -72,13 +72,13 @@
 
         .date {
             color: #BAA97D;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             margin-left: 1%;
             margin-bottom: 1%;
         }
 
         .info {
-            font-size: 1rem;
+            font-size: 1.1rem;
             margin-bottom: 3%;
             color: black;
         }

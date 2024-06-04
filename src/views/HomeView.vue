@@ -84,9 +84,8 @@ export default {
 
     .homeBanner {
         width: 100vw;
-        height: 170vh;
+        height: 150vh;
     }
-
 
     .homeView_title {
         width: 15vw;
@@ -95,21 +94,13 @@ export default {
     }
 
     .analyticsBlock {
-        // display: flex;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        gap: 10px;
+        gap: 40px;
         margin-top: 5%;
-        margin-left: 28%;
-        width: 45vw;
-        height: 45vh;
+        margin-left: 16%;
         overflow-wrap: initial;
-
-        .analytics {
-            width: 15.52vw;
-            height: 12.96vh;
-        }
     }
 
     .achievement {

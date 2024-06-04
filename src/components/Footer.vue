@@ -1,5 +1,16 @@
-<script setup>
-
+<script>
+import { RouterLink, RouterView } from 'vue-router'
+export default {
+    data() {
+        return {
+        }
+    },
+    components: {
+        RouterLink,
+    },
+    computed: {
+    }
+}
 </script>
 
 <template>
@@ -17,10 +28,6 @@
                     <p class="licenseOne">行政書士登録証 第 112365533-1号</p>
                     <p class="licenseTwo">有料職業紹介事業許可番号 13-ユ-313847</p>
                 </div>
-                <div class="licensePhoto">
-                    <img src="../../public/messageImage_1715911520807.jpg" alt="" class="licensePhotoOne">
-                    <img src="../../public/messageImage_1715911537019.jpg" alt="" class="licensePhotoTwo">
-                </div>
             </div>
             <div class="topRight">
                 <div class="describe">
@@ -32,30 +39,61 @@
                     <p class="desFive">有料職業紹介</p>
                 </div>
                 <div class="menu">
-                    <div class="menuOne">
-                        <p class="jap">ホーム</p>
-                        <p class="eng">TOP</p>
+
+                    <div class="menu_link">
+                        <p>
+                            <RouterLink to="/" class="jap">ホーム</RouterLink>
+                        </p>
+                        <p>
+                            <RouterLink to="/" class="eng">TOP</RouterLink>
+                        </p>
                     </div>
-                    <div class="menuTwo">
-                        <p class="jap">会社案内</p>
-                        <p class="eng">ABOUT US</p>
+
+
+                    <div class="menu_link">
+                        <p>
+                            <RouterLink to="/AboutUs" class="jap">会社案内</RouterLink>
+                        </p>
+                        <p>
+                            <RouterLink to="/AboutUs" class="eng">ABOUT US</RouterLink>
+                        </p>
                     </div>
-                    <div class="menuThree">
-                        <p class="jap">法務と行政書士</p>
-                        <p class="eng">SCRIVENER</p>
+
+
+                    <div class="menu_link">
+                        <p >
+                            <RouterLink to="/Scrivener" class="jap">法務と行政書士</RouterLink>
+                        </p>
+                        <p>
+                            <RouterLink to="/Scrivener" class="eng">SCRIVENER</RouterLink>
+                        </p>
                     </div>
-                    <div class="menuFour">
-                        <p class="jap">不動産</p>
-                        <p class="eng">REAL EASTATE</p>
+
+
+                    <div class="menu_link">
+                        <p>
+                            <RouterLink to="/RealEstate" class="jap">不動産</RouterLink>
+                        </p>
+                        <p>
+                            <RouterLink to="/RealEstate" class="eng">REAL EASTATE</RouterLink>
+                        </p>
                     </div>
-                    <div class="menuFive">
-                        <p class="jap">ビザサービス</p>
-                        <p class="eng">VISA SERVICE</p>
+
+
+                    <div class="menu_link">
+                        <p>
+                            <RouterLink to="/Visa"  class="jap">ビザサービズ</RouterLink>
+                        </p>
+                        <p>
+                            <RouterLink to="/Visa"  class="eng">VISA SERVICE</RouterLink>
+                        </p>
                     </div>
-                    <div class="menuSix">
+
+                    <div class="menu_link">
                         <p class="jap">聯絡我們</p>
                         <p class="eng">CONTACT US</p>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -78,6 +116,7 @@
         width: 100%;
         height: 90%;
         display: flex;
+
         .topLeft {
             img {
                 width: 278px;
@@ -99,49 +138,50 @@
                 margin-top: 60px;
                 margin-left: 120px;
             }
-
-            .licensePhoto {
-                .licensePhotoOne {
-                    width: 119px;
-                    height: 81px;
-                    margin-bottom: 140px;
-                }
-
-                .licensePhotoTwo {
-                    width: 89px;
-                    height: 126px;
-                    margin-bottom: 100px;
-                    margin-left: 60px;
-                }
-            }
         }
 
         .topRight {
-            .describe{
+            .describe {
                 margin-top: 190px;
                 margin-left: 40px;
-                .title{
+
+                .title {
                     font-size: 16pt;
                 }
-                .desOne{
+
+                .desOne {
                     margin-top: 20px;
                 }
-                .desFour{
+
+                .desFour {
                     margin-top: 40px;
                 }
-                .desFive{
+
+                .desFive {
                     margin-top: 20px;
                 }
             }
-            .menu{
+
+            .menu {
                 display: flex;
                 justify-content: space-around;
                 margin-left: 20px;
                 margin-top: 60px;
-                .eng{
-                    font-size: 8pt;
-                    color: #BAA97D;
+
+                .menu_link {
+
+                    .jap {
+                        text-decoration: none;
+                        color: #131840;
+                    }
+
+                    .eng {
+                        font-size: 8pt;
+                        color: #BAA97D;
+                        text-decoration: none;
+                    }
                 }
+
             }
         }
     }

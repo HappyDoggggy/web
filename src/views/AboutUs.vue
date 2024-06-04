@@ -28,9 +28,25 @@ export default {
                 { serviceInfo_title_h2: "法務とビザの専門家", serviceInfo_title_p: "Professional", serviceInfo_content_p: "ニーズにお応え、プロの経験から提案し、より効率的に解決できます。" },
                 { serviceInfo_title_h2: "経験豊富なベテラン", serviceInfo_title_p: "Experienced", serviceInfo_content_p: "チームのメンバーは数十年以上日本に生活した経験があります" },
             ],
-            serviceInfo_title_h2_1: "プロサービスを提供", 
-            serviceInfo_title_p_1: "Experienced", 
+            serviceInfo_title_h2_1: "プロサービスを提供",
+            serviceInfo_title_p_1: "Experienced",
             serviceInfo_content_p_1: "多くの大手企業と合意に達していて、長期かつ安定な提携関係を維持しています。",
+            outlineList: [
+                { outline_title: "商號", outline_content: "有限会社ジェーアルシー" },
+                { outline_title: "代表者", outline_content: "林　飛" },
+                { outline_title: "設立", outline_content: "平成6年10月（要確認）" },
+                { outline_title: "登記", outline_content: "平成27年10月5日（要確認）" },
+                { outline_title: "資本金", outline_content: "1,000万円（要確認）" },
+                { outline_title: "從業人數", outline_content: "正社員6名、アルバイト1名（要確認）" },
+                { outline_title: "事業內容", outline_content: "有限会社ジェーアルシー" },
+            ],
+            historyList: [
+                { history_time: "1994年 / 06月", history_text: "有限会社ジェーアルシー 設立 ビザ＆法務部門 設立" },
+                { history_time: "2017年 / 07月", history_text: "有料紹介＆労働派遣部門設立" },
+                { history_time: "2019年 / 10月", history_text: "登録支援機関許可取得" },
+                { history_time: "2022年 / 02月", history_text: "不動産部門設立" },
+                { history_time: "2022年 / 02月", history_text: "不動産部門設立" },
+            ]
         }
     },
     methods: {},
@@ -53,15 +69,28 @@ export default {
             </div>
         </div>
         <div class="aboutUs_serviceInfo_block_two">
-            <ServiceInfo :serviceInfo_title_h2="serviceInfo_title_h2_1"
-                    :serviceInfo_title_p="serviceInfo_title_p_1"
-                    :serviceInfo_content_p="serviceInfo_content_p_1"/>
+            <ServiceInfo :serviceInfo_title_h2="serviceInfo_title_h2_1" :serviceInfo_title_p="serviceInfo_title_p_1"
+                :serviceInfo_content_p="serviceInfo_content_p_1" />
         </div>
-        <div class="outline">
-            <Outline />
+        <div class="outline_main">
+            <div class="outline_mainTitle">
+                <h1>OUR OUTLINE</h1>
+            </div>
+            <div class="outline_text">
+                <div class="outline" v-for="(item, index) in outlineList" :key="index">
+                    <Outline :outline_title="item.outline_title" :outline_content="item.outline_content" />
+                </div>
+            </div>
         </div>
-        <div class="history">
-            <History />
+        <div class="history_main">
+            <div class="history_title">
+                <h1>HISTORY</h1>
+            </div>
+            <div class="history_content">
+                <div class="history" v-for="(item, index) in historyList" :key="index">
+                    <History :history_time="item.history_time" :history_text="item.history_text" />
+                </div>
+            </div>
         </div>
         <div class="serviceIcon">
             <ServiceIcon />
@@ -70,7 +99,7 @@ export default {
 
 </template>
 
-<style>
+<style scoped lang="scss">
 .aboutUs {
     width: 100vw;
 
@@ -107,14 +136,82 @@ export default {
         margin-bottom: 10%;
     }
 
-    .outline {
+    .outline_main {
         width: 100vw;
-        height: 70vh;
+        height: 74vh;
+        background-color: #131840;
+        display: flex;
+
+        .outline_mainTitle {
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            margin-top: 5%;
+
+            h1 {
+                writing-mode: vertical-rl;
+                font-size: 2.2rem;
+                color: white;
+            }
+        }
+
+        .outline_mainTitle::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 400px;
+            background-color: #BAA97D;
+            left: 10%;
+            top: 130.5%
+        }
+
+        .outline_text {
+            width: 80%;
+            margin-top: 3%;
+        }
+
+        .outline {
+            margin-top: 3%;
+        }
     }
 
-    .history {
+    .history_main {
         width: 100vw;
         height: 60vh;
+        display: flex;
+
+        .history_title {
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            margin-top: 5%;
+
+            h1 {
+                writing-mode: vertical-rl;
+                font-size: 2.2rem;
+                color: #131840;
+            }
+        }
+
+        .history_title::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 400px;
+            background-color: #c5c5c5;
+            left: 17%;
+            bottom: -158%;
+        }
+
+        .history_content {
+            width: 80%;
+            margin-top: 3%;
+
+            .history {
+                margin-top: 3%;
+            }
+        }
+
     }
 
     .serviceIcon {
