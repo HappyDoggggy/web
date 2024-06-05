@@ -112,7 +112,7 @@ export default {
 
     .serviceIcon {
         width: 100vw;
-        height: 80vh;
+        height: 70vh;
     }
 
     .wechat {

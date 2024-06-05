@@ -1,6 +1,7 @@
 <script>
 import Banner from '../components/Banner.vue';
 import PictureIntro from '../components/PictureIntro.vue';
+import PictureIntroTwo from '../components/PictureIntroTwo.vue';
 import ContactUs from '../components/ContactUs.vue';
 import { RouterView } from 'vue-router';
 export default {
@@ -8,6 +9,7 @@ export default {
     components: {
         Banner,
         PictureIntro,
+        PictureIntroTwo,
         ContactUs,
         RouterView
     },
@@ -22,7 +24,9 @@ export default {
             content_text_intro_p1: '弊社と提携する学院は多所があり、学生に豊富なコースが選択できます。日本語学校を卒業後、学生自身の状況に応じた様々な進路を推薦します。',
             content_text_intro_p2: '日本語学校が修了後、大学に落ちた留学生を提携大学への入学を推薦します。',
             //
-            content_picture_1: '/student.jpg',
+            content_picture_01: '/student.jpg',
+            content_picture_02: '/nurse.jpg',
+            content_picture_03: '/Tokyo.jpg',
             content_text_title_h2_1: '有料職業紹介',
             content_text_title_h3_1: 'CHARGED EMPLOYMENT PLACEMENT BUSINESSES',
             content_text_intro_p1_1: '転職で失敗する人が多い裏側には、転職サイトやエージェントサービスごとに得意不得意があるという背景があります。あなたにおすすめの転職サービスを診断します',
@@ -33,6 +37,7 @@ export default {
             content_text_title_h3_2: 'SPECIFIED SKILLED WORKER VISA',
             content_text_intro_p1_2: '弊社は30年以上の豊富なビザ代行経験に基づき、申請を提出し2022年10月に登録支援機関の許可をいただきました。数年間で数十社の提携企業に百人以上の労動技術者を推薦しました。',
             content_text_intro_p2_2: '得意職種　外食・介護・ホテル',
+            //
         }
     },
     methods: {},
@@ -60,14 +65,9 @@ export default {
                 <p class="visa_workingVisa_text_intro_p2">日本語学校が修了後、大学に落ちた留学生を提携大学への入学を推薦します。</p>
             </div>
         </div>
-        <div class="pictureIntro_two">
-            <img class="pictureIntro_two_pic" :src="content_picture_1" alt="Picture Intro Two">
-            <div class="text_content">
-                <h2 class="text_content_h2_1">{{ content_text_title_h2_1 }}</h2>
-                <h3 class="text_content_h3_1">{{ content_text_title_h3_1 }}</h3>
-                <p class="text_content_p1_1">{{ content_text_intro_p1_1 }}</p>
-                <p class="text_content_p2_1">{{ content_text_intro_p2_1 }}</p>
-            </div>
+        <div class="pictureIntroTwo">
+            <PictureIntroTwo :imgSrc1="content_picture_01" :imgSrc2="content_picture_02" :imgSrc3="content_picture_03" :text1="content_text_title_h2_1" :text2="content_text_title_h3_1"
+                :text3="content_text_intro_p1_1" :text4="content_text_intro_p2_1" />
         </div>
         <div class="pictureIntro_three">
             <img class="pictureIntro_three_pic" :src="content_picture_2" alt="Picture Intro Two">
@@ -139,67 +139,16 @@ export default {
         }
     }
 
-    .pictureIntro_two {
+    .pictureIntroTwo {
         width: 100vw;
         height: 80vh;
-        position: relative;
-        margin-top: 10%;
-
-        .pictureIntro_two_pic {
-            width: 95%;
-            height: 100%;
-            position: absolute;
-            left: 2%;
-        }
-
-        .text_content {
-            position: absolute;
-            width: 83%;
-            height: 50%;
-            background-color: white;
-            border-radius: 20pt;
-            left: 15%;
-            top: 73%;
-
-            .text_content_h2_1 {
-                margin-top: 4%;
-                margin-left: 10%;
-                font-size: 2rem;
-            }
-
-            .text_content_h2_1::before {
-                content: "";
-                position: absolute;
-                width: 3%;
-                height: 2%;
-                background-color: #000;
-                left: 10%;
-                bottom: 55%;
-            }
-
-            .text_content_h3_1 {
-                margin-top: 0.5%;
-                margin-left: 10%;
-                color: #B09D6B;
-            }
-
-            .text_content_p1_1 {
-                margin-top: 3%;
-                margin-left: 10%;
-            }
-
-            .text_content_p2_1 {
-                margin-top: 2%;
-                margin-left: 10%;
-            }
-        }
     }
 
     .pictureIntro_three {
         width: 100vw;
         height: 80vh;
         position: relative;
-        margin-top: 10%;
+        margin-top: 20%;
         margin-bottom: 10%;
 
         .pictureIntro_three_pic {

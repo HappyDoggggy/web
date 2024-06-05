@@ -34,7 +34,7 @@
 .service {
     background-color: #131840;
     width: 100%;
-    height: 85%;
+    height: 100%;
 
     .title {
         width: 100%;
