@@ -1,4 +1,15 @@
 <script>
+export default {
+    data() {
+        return {
+            serviceIconList: [
+                { icon_picture: "lawIcon.jpg", icon_h2: "法務", icon_p: "SCRIVENER" },
+                { icon_picture: "buildingIcon.jpg", icon_h2: "不動產", icon_p: "REAL ESTATE" },
+                { icon_picture: "visaIcon.jpg", icon_h2: "ビザ", icon_p: "VISA" },
+            ]
+        }
+    },
+}
 </script>
 
 <template>
@@ -8,23 +19,10 @@
             <p class="two text">サービズ</p>
         </div>
         <div class="serviceIcon">
-            <div class="first icon">
-                <div class="left circle">
-                    <h2 class="law">法務</h2>
-                    <p class="lawEng">SCRIVENER</p>
-                </div>
-            </div>
-            <div class="second icon">
-                <div class="middle circle">
-                    <h2 class="house">不動産</h2>
-                    <p class="houseEng">REAL ESTATE</p>
-                </div>
-            </div>
-            <div class="third icon">
-                <div class="right circle">
-                    <h2 class="visa">ビザ</h2>
-                    <p class="visaEng">VISA</p>
-                </div>
+            <div class="icon" v-for="(item, index) in serviceIconList" :key="index">
+                <img class="icon_picture" :src="item.icon_picture" alt="">
+                <h2 class="icon_h2">{{ item.icon_h2 }}</h2>
+                <p class="icon_p">{{ item.icon_p }}</p>
             </div>
         </div>
     </div>
@@ -39,7 +37,6 @@
     .title {
         width: 100%;
         height: 30%;
-        background-color: #131840;
         box-sizing: border-box;
         padding-top: 3%;
 
@@ -64,80 +61,82 @@
         height: 70%;
         background-color: #131840;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        align-items: center;
 
         .icon {
-            width: 30%;
-            height: 100%;
-            background-color: #131840;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+            width: 300px;
+            height: 300px;
+            background-color: white;
+            border-radius: 50%;
+            text-align: center;
 
-            .circle {
-                width: 260px;
-                height: 260px;
-                background-color: white;
-                border-radius: 50%;
-                margin-bottom: 20%;
+            .icon_picture {
+                width: 200px;
+                height: 200px;
+                margin-top: 37px;
             }
 
-            .left {
-                background-image: url(../../public/messageImage_1716175906281.jpg);
-                background-repeat: no-repeat;
-                background-size: 63% 65%;
-                background-position: 50% 20%;
+            .icon_p {
+                color: #BAA97D;
+                margin-left: 70px;
+            }
+        }
 
-                .law {
-                    text-align: center;
-                    margin-top: 63%;
-                    font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .service {
+        .title{
+            height: 10%;
+            .one{
+                font-size: 1.2rem;
+            }
+            .two{
+                font-size: 0.6rem;
+            }
+        }
+        .serviceIcon {
+            display: block;
+            padding-left: 25%;
+            .icon{
+                width: 180px;
+                height: 180px;
+                margin-bottom: 8%;
+                .icon_picture{
+                    width: 80px;
+                    height: 80px;
                 }
+                .icon_h2{
+                    font-size: 1.1rem;
+                }
+                .icon_p{
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
 
-                .lawEng {
-                    margin-left: 50%;
-                    font-size: 1.2rem;
-                    color: #BAA97D;
+@media screen and (min-width: 430px) and (max-width: 1024px) {
+    .service {
+        .title {
+            box-sizing: border-box;
+            padding-top: 10%;
+        }
+
+        .serviceIcon {
+            .icon {
+                width: 250px;
+                height: 250px;
+
+                .icon_picture {
+                    width: 150px;
+                    height: 150px;
                 }
             }
 
-            .middle {
-                background-image: url(../../public/messageImage_1716185709244.jpg);
-                background-repeat: no-repeat;
-                background-size: 63% 65%;
-                background-position: 50% 20%;
-
-                .house {
-                    text-align: center;
-                    margin-top: 63%;
-                    font-size: 2rem;
-                }
-
-                .houseEng {
-                    margin-left: 46%;
-                    font-size: 1.2rem;
-                    color: #BAA97D;
-                }
-            }
-
-            .right {
-                background-image: url(../../public/messageImage_1716185723500.jpg);
-                background-repeat: no-repeat;
-                background-size: 63% 65%;
-                background-position: 50% 20%;
-
-                .visa {
-                    text-align: center;
-                    margin-top: 63%;
-                    font-size: 2rem;
-                }
-
-                .visaEng {
-                    margin-left: 52%;
-                    font-size: 1.2rem;
-                    color: #BAA97D;
-                }
-            }
         }
     }
 }

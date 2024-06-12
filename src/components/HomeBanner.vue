@@ -145,4 +145,132 @@
 
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .homeBanner_main {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        &::before {
+            display: none;
+        }
+
+        .homeBanner_main_block {
+            height: 0%;
+
+            .homeBanner_main_Text1 {
+                font-size: 2rem;
+                margin-top: 8%;
+            }
+
+            .homeBanner_main_Text2 {
+                font-size: 2rem;
+                margin-top: 0%;
+            }
+        }
+
+        .homeBanner_mainPic {
+            position: absolute;
+            left: 0;
+            top: 10%;
+            z-index: -1;
+
+            img {
+                width: 145%;
+                height: 80%;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .homeBanner_main_info_block {
+            width: 100%;
+            height: 25%;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            bottom: 30%;
+            border-radius: 25px;
+
+            .homeBanner_link_block {
+                margin-left: 40%;
+
+                .homeBanner_link_text_block {
+                    .homeBanner_link_text {
+                        font-size: 1rem;
+                    }
+
+                    .homeBanner_link_text_en {
+                        font-size: 0.5rem;
+                    }
+                }
+
+                .fa-solid {
+                    font-size: 1rem;
+                }
+            }
+
+            .homeBanner_main_title {
+                font-size: 1.5rem;
+            }
+
+            .homeBanner_link_text_en {
+                font-size: 0.4rem;
+            }
+
+            .homeBanner_main_content1 {
+                font-size: 0.6rem;
+            }
+
+            .homeBanner_main_content2 {
+                font-size: 0.6rem;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px) {
+    .homeBanner_main {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        &::before {
+            display: none;
+        }
+
+        .homeBanner_mainPic {
+            position: absolute;
+            left: 0;
+            z-index: -1;
+
+            img {
+                width: 145%;
+                height: 80%;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .homeBanner_main_info_block {
+            width: 100%;
+            height: 25%;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            bottom: 20%;
+            border-radius: 25px;
+
+            .homeBanner_link_block {
+                margin-left: 43%;
+            }
+        }
+    }
+}
 </style>

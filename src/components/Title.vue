@@ -46,4 +46,16 @@ export default {
         font-weight: bold;
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 430px){
+
+    .title_block{
+        .title{
+            font-size: 1.3rem;
+        }
+        .subtitle{
+            font-size: 0.4rem;
+        }
+    }
+}
 </style>

@@ -99,10 +99,8 @@ export default {
         position: relative;
         width: 70vw;
         display: flex;
-        flex-wrap: wrap;
         margin-left: 22%;
         margin-top: 15%;
-
     }
 
     .pictureIntro_two {
@@ -173,6 +171,47 @@ export default {
         width: 100vw;
         height: 40vh;
         margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 1024px) {
+    .scrivener {
+        .scrivener_serviceInfo_block {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .pictureIntro_two {
+            .pictureIntro_two_pic {
+                width: 100%;
+                height: 80%;
+                left: 0;
+            }
+
+            .text_content {
+                width: 100%;
+                left: 0;
+
+                .text_content_h2::before {
+                    bottom: 65%;
+                }
+            }
+        }
+
+        .scrivener_serviceInfo_block {
+            .scrivener_serviceInfo {
+                width: 265px;
+            }
+        }
+
+        .scrivener_serviceInfo_block_two {
+            margin-left: 25%;
+            justify-content: space-around;
+
+            .scrivener_serviceInfo_two {
+                width: 265px;
+            }
+        }
     }
 }
 </style>

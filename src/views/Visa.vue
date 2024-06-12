@@ -24,9 +24,7 @@ export default {
             content_text_intro_p1: '弊社と提携する学院は多所があり、学生に豊富なコースが選択できます。日本語学校を卒業後、学生自身の状況に応じた様々な進路を推薦します。',
             content_text_intro_p2: '日本語学校が修了後、大学に落ちた留学生を提携大学への入学を推薦します。',
             //
-            content_picture_01: '/student.jpg',
-            content_picture_02: '/nurse.jpg',
-            content_picture_03: '/Tokyo.jpg',
+            content_picture_arr: ['/student.jpg', '/nurse.jpg', '/Tokyo.jpg'],
             content_text_title_h2_1: '有料職業紹介',
             content_text_title_h3_1: 'CHARGED EMPLOYMENT PLACEMENT BUSINESSES',
             content_text_intro_p1_1: '転職で失敗する人が多い裏側には、転職サイトやエージェントサービスごとに得意不得意があるという背景があります。あなたにおすすめの転職サービスを診断します',
@@ -66,8 +64,8 @@ export default {
             </div>
         </div>
         <div class="pictureIntroTwo">
-            <PictureIntroTwo :imgSrc1="content_picture_01" :imgSrc2="content_picture_02" :imgSrc3="content_picture_03" :text1="content_text_title_h2_1" :text2="content_text_title_h3_1"
-                :text3="content_text_intro_p1_1" :text4="content_text_intro_p2_1" />
+            <PictureIntroTwo :text1="content_text_title_h2_1" :text2="content_text_title_h3_1"
+                :text3="content_text_intro_p1_1" :text4="content_text_intro_p2_1" :picArr="this.content_picture_arr" />
         </div>
         <div class="pictureIntro_three">
             <img class="pictureIntro_three_pic" :src="content_picture_2" alt="Picture Intro Two">
@@ -199,10 +197,57 @@ export default {
             }
         }
     }
+
     .contactUs {
         width: 100vw;
         height: 40vh;
         margin-top: 15%;
     }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px) {
+    .visa {
+        .visa_workingVisa {
+            width: 100%;
+            margin-left: 0;
+
+            .visa_workingVisa_text_title::before {
+                bottom: 54%;
+            }
+        }
+
+        .pictureIntro_three {
+            .pictureIntro_three_pic {
+                width: 100%;
+                height: 80%;
+                left: 0;
+            }
+
+            .text_content_2 {
+                width: 100%;
+                left: 0;
+                .text_content_h2_2 {
+                margin-left: 8%;
+            }
+                .text_content_h2_2::before {
+                    bottom: 65.5%;
+                    left: 8%;
+                }
+
+                .text_content_h3_2 {
+                    margin-left: 8%;
+                }
+
+                .text_content_p1_2 {
+                    margin-left: 8%;
+                }
+
+                .text_content_p2_2 {
+                    margin-left: 8%;
+                }
+            }
+        }
+    }
+
 }
 </style>

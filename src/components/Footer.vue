@@ -121,26 +121,30 @@ export default {
             img {
                 width: 278px;
                 height: 83px;
-                margin-left: 120px;
+                margin-left: 15%;
                 margin-top: 60px;
             }
 
             .address {
-                margin-left: 120px;
+                margin-left: 15%;
                 margin-top: 40px;
 
                 .name {
                     margin-bottom: 10px;
                 }
+                // .add{
+                //     font-size: 0.8rem;
+                // }
             }
 
             .license {
                 margin-top: 60px;
-                margin-left: 120px;
+                margin-left: 15%;
             }
         }
 
         .topRight {
+            margin-right: 10%;
             .describe {
                 margin-top: 190px;
                 margin-left: 40px;

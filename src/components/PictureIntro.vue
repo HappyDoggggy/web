@@ -74,7 +74,17 @@ export default {
             }
             
         }
-        .content_text_title::before {
+        
+        .content_text_intro{
+            margin-top: 8%;
+            margin-left: 10%;
+            margin-right: 10%;
+            .content_text_intro_p2{
+                margin-top: 3%;
+            }
+        }
+    }
+    .content_text::before {
                 content: "";
                 position: absolute;
                 width: 5%;
@@ -84,14 +94,22 @@ export default {
                 transform: translateX(-50%);
                 bottom: 60%;
             }
-        .content_text_intro{
-            margin-top: 8%;
-            margin-left: 10%;
-            margin-right: 10%;
-            .content_text_intro_p2{
-                margin-top: 3%;
-            }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px){
+    .content{
+        .content_picture{
+            width: 100%;
+            height: 80%;
+            left: 0;
         }
+        .content_text{
+            width: 100%;
+            left: 0;
+        }
+        .content_text::before{
+                bottom: 65.5%;
+            }
     }
 }
 </style>

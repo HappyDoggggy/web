@@ -71,4 +71,13 @@ export default {
         height: 40vh;
     }
 }
+
+@media screen and (min-width: 430px) and (max-width: 1024px){
+    .realestate{
+        .realEstateIcon{
+            height: 20vh;
+            margin-right: 10%;
+        }
+    }
+}
 </style>

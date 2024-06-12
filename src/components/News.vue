@@ -30,28 +30,6 @@
     position: relative;
     z-index: 2;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 46%;
-        left: 33%;
-        width: 45%;
-        height: 0.5%;
-        background-color: #131840;
-        z-index: 1;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 71%;
-        left: 33%;
-        width: 45%;
-        height: 0.5%;
-        background-color: #131840;
-        z-index: 1;
-    }
-
     .news_text_block {
         width: 10%;
         height: 10%;
@@ -70,11 +48,34 @@
         margin-top: 6%;
         margin-left: 13%;
 
+        &::before {
+            content: '';
+            position: absolute;
+            top: 46%;
+            left: 33%;
+            width: 45%;
+            height: 0.5%;
+            background-color: #131840;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 71%;
+            left: 33%;
+            width: 45%;
+            height: 0.5%;
+            background-color: #131840;
+            z-index: 1;
+        }
+
         .date {
             color: #BAA97D;
             font-size: 0.9rem;
             margin-left: 1%;
             margin-bottom: 1%;
+
         }
 
         .info {
@@ -88,5 +89,48 @@
         }
     }
 
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px) {
+    .news_main {
+
+        .news_text_block {
+            .news_text {
+                margin-top: 250%;
+
+            }
+        }
+
+        .news_news_block {
+            margin-top: 20%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 63%;
+                left: 33%;
+                width: 500px;
+                height: 0.5%;
+                background-color: #131840;
+                z-index: 1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 80%;
+                left: 33%;
+                width: 500px;
+                height: 0.5%;
+                background-color: #131840;
+                z-index: 1;
+            }
+
+            .info {
+                font-size: 1rem;
+                width: 700px;
+            }
+        }
+    }
 }
 </style>

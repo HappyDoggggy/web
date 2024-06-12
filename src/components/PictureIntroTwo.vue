@@ -2,18 +2,6 @@
 export default {
     name: 'PictureIntro',
     props: {
-        imgSrc1: {
-            type: String,
-            required: true
-        },
-        imgSrc2: {
-            type: String,
-            required: true
-        },
-        imgSrc3: {
-            type: String,
-            required: true
-        },
         text1: {
             type: String,
             required: true
@@ -29,6 +17,10 @@ export default {
         text4: {
             type: String,
             required: true
+        },
+        picArr: {
+            type: Array,
+            required: true
         }
     }
 }
@@ -37,9 +29,7 @@ export default {
 <template>
     <div class="content">
         <div class="pic">
-                <img class="content_picture1" :src="imgSrc1" alt="">
-                <img class="content_picture2" :src="imgSrc2" alt="">
-                <img class="content_picture3" :src="imgSrc3" alt="">
+            <img class="content_picture" v-for="item in picArr" :src="item" alt="">
         </div>
 
         <div class="content_text">
@@ -68,20 +58,12 @@ export default {
         justify-content: center;
         width: 100%;
         height: 100%;
-        .content_picture1 {
+
+        .content_picture {
             width: 30%;
             height: 100%;
             margin-top: 5%;
-        }
-        .content_picture2 {
-            width: 30%;
-            height: 100%;
-            margin-top: 5%;
-        }
-        .content_picture3 {
-            width: 30%;
-            height: 100%;
-            margin-top: 5%;
+            object-fit: cover;
         }
     }
 
@@ -108,17 +90,6 @@ export default {
 
         }
 
-        .content_text_title::before {
-            content: "";
-            position: absolute;
-            width: 3%;
-            height: 2%;
-            background-color: #000;
-            left: 11.5%;
-            transform: translateX(-50%);
-            bottom: 57%;
-        }
-
         .content_text_intro {
             margin-top: 4%;
             margin-left: 10%;
@@ -129,5 +100,40 @@ export default {
             }
         }
     }
+
+    .content_text_title::before {
+            content: "";
+            position: absolute;
+            width: 3%;
+            height: 2%;
+            background-color: #000;
+            left: 11.5%;
+            transform: translateX(-50%);
+            bottom: 57%;
+        }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px) {
+    .content {
+        .pic {
+            .content_picture {
+                width: 30%;
+                height: 50%;
+            }
+        }
+        .content_text{
+            width: 100%;
+            left: 0;
+            .content_text_intro{
+                margin-top: 60px;
+            }
+        }
+        .content_text_title::before{
+            bottom: 71%;
+            left: 12.5%;
+            width: 5%;
+        }
+    }
+
 }
 </style>

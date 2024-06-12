@@ -5,6 +5,18 @@ export default {
         return {
         }
     },
+    methods: {
+        hidebar() {
+            const sidebar = document.querySelector(".info_link_close")
+            sidebar.style.display = "none"
+        },
+        showbar() {
+            const sidebar = document.querySelector(".info_link_close")
+            sidebar.style.display = "flex"
+            console.log("xxxx")
+            console.dir(sidebar)
+        }
+    },
     components: {
         RouterLink,
     },
@@ -22,6 +34,15 @@ export default {
                 <span class="address">東京都豊島区北大塚２ー１２ー８　大星ビル5F　　</span>
                 <span class="content">法務・留学・有料職業紹介・特定技能・不動産業務</span>
             </div>
+            <div class="info_link_close">
+                <i class="fa-solid fa-xmark" @click="hidebar()"></i>
+                <RouterLink to="/" class="link">ホーム</RouterLink>
+                <RouterLink to="/AboutUs" class="link">会社案内</RouterLink>
+                <RouterLink to="/Scrivener" class="link">法務と行政書士</RouterLink>
+                <RouterLink to="/RealEstate" class="link">不動産</RouterLink>
+                <RouterLink to="/Visa" class="link">ビザサービズ</RouterLink>
+            </div>
+            <!-- 這是打叉圖，會先隱藏起來 -->
             <div class="info_link">
                 <div class="info_link_block">
                     <RouterLink to="/" class="link">ホーム</RouterLink>
@@ -30,7 +51,9 @@ export default {
                     <RouterLink to="/RealEstate" class="link">不動産</RouterLink>
                     <RouterLink to="/Visa" class="link">ビザサービズ</RouterLink>
                 </div>
+                <i class="fa-solid fa-bars" @click="this.showbar()"></i>
             </div>
+            <!-- 漢堡圖（當寬度塞不下所有 header 資訊時要出現） -->
         </div>
         <div class="mail">
             <a href=""><i class="fa-solid fa-envelope"></i></a>
@@ -43,9 +66,10 @@ export default {
     width: 100%;
     height: 100%;
     display: flex;
+    padding-left: 1%;
 
     .header_logo {
-        width: 13%;
+        width: 300px;
         height: 100%;
         background-image: url(../../public/LOGO.png);
         background-repeat: round;
@@ -53,7 +77,7 @@ export default {
     }
 
     .header_info {
-        width: 86%;
+        width: 83%;
         height: 100%;
         background-color: #FDFDFD;
 
@@ -64,14 +88,13 @@ export default {
 
             .address {
                 margin-top: 0.5%;
-                margin-left: 61%;
+                margin-left: 57.5%;
                 font-weight: bold;
                 font-size: 0.6rem;
             }
 
             .content {
                 margin-top: 0.5%;
-                
                 font-weight: bold;
                 font-size: 0.6rem;
             }
@@ -91,10 +114,30 @@ export default {
                     margin-right: 3%;
                     font-weight: bold;
                     color: black;
-                    text-decoration: none; 
+                    text-decoration: none;
                 }
+
+            }
+
+            .fa-bars {
+                display: none;
             }
         }
+
+        .info_link_close {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100dvh;
+            // display: flex;
+            flex-direction: column;
+            background-color: rgb(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            z-index: 999;
+        }
+
     }
 
     .mail {
@@ -108,6 +151,62 @@ export default {
         .fa-envelope {
             color: #FDFDFD;
             font-size: 15pt;
+        }
+    }
+}
+
+//手機
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .header_main {
+        .header_info {
+            .header_info_block {
+                display: none;
+            }
+
+            .info_link {
+                position: relative;
+                .info_link_block {
+                    display: none;
+                }
+
+                .fa-bars {
+                    display: block;
+                    font-size: 30pt;
+                    z-index: 10;
+                    position: absolute;
+                    right: 3dvw;
+                    top: 2dvh;
+                }
+            }
+
+            .info_link_close {
+                width: 100%;
+            }
+        }
+        .mail {
+                display: none;
+            }
+    }
+
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px) {
+    .header_main {
+        .header_info {
+            .info_link_close{
+                display: none;
+            }
+            .header_info_block {
+                justify-content: flex-end;
+                .address {
+                    margin-left: 10%;
+                    margin-top: 3%;
+                }
+                .content{
+                    margin-top: 3%;
+                    width: 240px;
+                }
+            }
         }
     }
 }

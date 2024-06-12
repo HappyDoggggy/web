@@ -197,10 +197,22 @@ export default {
             content: "";
             position: absolute;
             width: 2px;
-            height: 400px;
+            height: 50%;
             background-color: #c5c5c5;
             left: 17%;
             bottom: -158%;
+        }
+
+        .history_title::after {
+            content: "";
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            transform: rotate(45deg);
+            border-radius: 5px;
+            background-color: #BAA97D;
+            left: 80%;
+            top: 128%;
         }
 
         .history_content {
@@ -211,7 +223,6 @@ export default {
                 margin-top: 3%;
             }
         }
-
     }
 
     .serviceIcon {
@@ -220,4 +231,44 @@ export default {
     }
 
 }
+
+//平板
+@media screen and (min-width: 431px) and (max-width: 1024px) {
+    .aboutUs {
+        .outline_main {
+            height: 38vh;
+
+            .outline_mainTitle::before {
+                height: 285px;
+                top: 112.5%;
+                left: 13%;
+            }
+        }
+
+        .history_main {
+            height: 38dvh;
+
+            .history_title::before {
+                bottom: -78%;
+                left: 17.25%;
+                height: 26dvh;
+            }
+
+            .history_title::after {
+                width: 40px;
+                height: 40px;
+                left: 80%;
+                top: 110.5%;
+            }
+        }
+
+        .serviceIcon {
+            height: 50vh;
+        }
+    }
+
+}
+
+//電腦螢幕
+@media screen and (min-width: 1025px) {}
 </style>

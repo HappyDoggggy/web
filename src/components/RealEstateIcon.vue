@@ -29,19 +29,42 @@
     .realEstateIcon_picture {
         margin-left: 20%;
         display: flex;
-        .picture{
-            img{
+
+        .picture {
+            img {
                 width: 50%;
                 height: 80%;
             }
-            p{
+
+            p {
                 margin-left: 10%;
                 color: #131840;
             }
         }
-        .realEstateIcon_picture_4{
-            .realEstateIcon_picture_4_p4{
+
+        .realEstateIcon_picture_4 {
+            .realEstateIcon_picture_4_p4 {
                 margin-left: -2%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 1024px) {
+    .realEstateIcon {
+        .realEstateIcon_picture {
+            margin-left: 15%;
+
+            .picture {
+                p {
+                    margin-left: 2%;
+                }
+            }
+
+            .realEstateIcon_picture_4 {
+                .realEstateIcon_picture_4_p4 {
+                    margin-left: -12%;
+                }
             }
         }
     }

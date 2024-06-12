@@ -24,7 +24,7 @@ export default {
                 { analytics_title: "不動産投資依頼人数", analytics_data: 109, analytics_unit: "人" },
                 { analytics_title: "ローンなど相談", analytics_data: 930, analytics_unit: "件" },
                 { analytics_title: "賃貸紹介件数", analytics_data: 866, analytics_unit: "件" }
-            ]
+            ],
         }
     },
     methods: {
@@ -54,10 +54,8 @@ export default {
             <Title :title="title" :subtitle="subtitle" />
         </div>
         <div class="analyticsBlock">
-            <div class="analytics" v-for="(item, index) in analyticsList" :key="index">
-                <Analytics :analytics_title="item.analytics_title" :analytics_data="item.analytics_data"
-                    :analytics_unit="item.analytics_unit" />
-            </div>
+            <Analytics v-for="(item, index) in analyticsList" :key="index" :analytics_title="item.analytics_title"
+                :analytics_data="item.analytics_data" :analytics_unit="item.analytics_unit" />
         </div>
         <div class="achievement">
             <p class="achievement_p1">実績出したから、信頼関係確実なので何でも安心！</p>
@@ -113,6 +111,8 @@ export default {
     .serviceIcon {
         width: 100vw;
         height: 70vh;
+        display: flex;
+        align-items: center;
     }
 
     .wechat {
@@ -130,5 +130,54 @@ export default {
         height: 110vh;
     }
 
+}
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .homeView {
+        .homeBanner {
+            width: 100vw;
+            height: 80vh;
+        }
+
+        .homeView_title {
+            margin-left: 35%;
+            margin-bottom: 8%;
+        }
+
+        .analyticsBlock {
+            gap: 20px;
+            margin-left: 6%;
+        }
+
+        .achievement {
+            margin-top: 10%;
+            margin-bottom: 10%;
+            font-size: 0.6rem;
+        }
+        .serviceIcon{
+            height: 105vh;
+        }
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px) {
+    .homeView {
+        .homeBanner {
+            width: 100vw;
+            height: 110vh;
+        }
+
+        .homeView_title {
+            margin-left: 40%;
+        }
+
+        .analyticsBlock {
+            margin-left: 10%;
+        }
+
+        .serviceIcon {
+            height: 50vh;
+        }
+    }
 }
 </style>

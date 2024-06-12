@@ -54,4 +54,12 @@ export default {
             top: 15%;
         }
 }
+
+@media screen and (min-width: 431px) and (max-width: 1024px){
+    .history{
+        .history_timeLine{
+            width: 220px;
+        }
+    }
+}
 </style>

@@ -86,4 +86,35 @@
         }
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 430px){
+    .wechat{
+        display: block;
+        .wechat_content{
+            .wechat_content_text{
+                margin-left: 10%;
+            }
+            .wechat_content_label{
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px){
+    .wechat{
+        .wechat_content{
+            margin-left: 5%;
+            .wechat_content_text{
+                .wechat_content_text_p1{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        .wechat_picture{
+            display: flex;
+            justify-content:flex-end;
+        }
+    }
+}
 </style>
