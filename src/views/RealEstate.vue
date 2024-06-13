@@ -72,9 +72,23 @@ export default {
     }
 }
 
-@media screen and (min-width: 430px) and (max-width: 1024px){
-    .realestate{
-        .realEstateIcon{
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .realestate {
+        .realEstate_title {
+        width: 15vw;
+        height: 7vh;
+        margin-left: 15%;
+        margin-top: 5%;
+    }
+        .realEstateIcon {
+            height: 15vh;
+        }
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 1024px) {
+    .realestate {
+        .realEstateIcon {
             height: 20vh;
             margin-right: 10%;
         }

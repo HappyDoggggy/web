@@ -58,19 +58,18 @@ export default {
         }
 
         .analytics_unit_block {
-            // margin-top: 10px;
-            // margin-left: 12px;
             position: absolute;
-            right: 0;
+            right: 200px;
+            top: 8px;
 
             .analytics_unit {
-                font-size: 0.8rem;
+                font-size: 1rem;
                 margin-top: 30%;
             }
 
             .analytics_unit_up {
                 color: #BAA97D;
-                font-size: 0.67rem;
+                font-size: 0.7rem;
             }
         }
     }
@@ -88,11 +87,40 @@ export default {
             font-size: 1.2rem;
         }
         .analytics_unit_block{
+            position: absolute;
+            right: 15px;
+            top: 8px;
             .analytics_unit{
                 font-size: 0.4rem;
             }
             .analytics_unit_up{
                 font-size: 0.33rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px){
+    .analytics_data_block {
+
+        .analytics_data {
+            font-size: 2.5rem;
+            margin-right: 3px;
+        }
+
+        .analytics_unit_block {
+            position: absolute;
+            right: 35px;
+            top: 8px;
+
+            .analytics_unit {
+                font-size: 1rem;
+                margin-top: 30%;
+            }
+
+            .analytics_unit_up {
+                color: #BAA97D;
+                font-size: 0.7rem;
             }
         }
     }

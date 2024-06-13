@@ -58,26 +58,41 @@ export default {
 
     .serviceInfo_content {
         width: 31vw;
-        margin: 0 auto;
     }
 
 }
 
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .serviceInfo {
+
+        .serviceInfo_title::before {
+            height: 70%;
+            bottom: 0;
+            top: 0;
+        }
+
+        .serviceInfo_title {
+
+            .serviceInfo_title_h2 {
+                font-size: 0.8rem;
+            }
+
+            .serviceInfo_title_p {
+                font-size: 0.5rem;
+            }
+        }
+
+        .serviceInfo_content {
+            .serviceInfo_content_p {
+                font-size: 0.5rem;
+                // width: 200px;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .serviceInfo {
-        // .serviceInfo_title{
-        //     .serviceInfo_title_h2{
-        //         width: 120%;
-        //     }
-        //     .serviceInfo_title_p{
-        //         width: 120%;
-        //     }
-        // }
-        // .serviceInfo_content{
-        //     .serviceInfo_content_p{
-        //         width: 120%;
-        //     }
-        // }
         .serviceInfo_title::before {
             content: "";
             position: absolute;

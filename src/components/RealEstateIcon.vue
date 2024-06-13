@@ -50,6 +50,34 @@
     }
 }
 
+@media screen and (min-width: 300px) and (max-width: 430px){
+    .realEstateIcon {
+    .realEstateIcon_picture {
+        margin-left: 10%;
+        display: flex;
+
+        .picture {
+            img {
+                width: 50%;
+                height: 80%;
+            }
+
+            p {
+                margin-left: 5%;
+                color: #131840;
+                font-size: 0.5rem;
+            }
+        }
+
+        .realEstateIcon_picture_4 {
+            .realEstateIcon_picture_4_p4 {
+                margin-left: -10%;
+            }
+        }
+    }
+}
+}
+
 @media screen and (min-width: 430px) and (max-width: 1024px) {
     .realEstateIcon {
         .realEstateIcon_picture {

@@ -32,19 +32,18 @@ export default {
             serviceInfo_title_p_1: "Experienced",
             serviceInfo_content_p_1: "多くの大手企業と合意に達していて、長期かつ安定な提携関係を維持しています。",
             outlineList: [
-                { outline_title: "商號", outline_content: "有限会社ジェーアルシー" },
-                { outline_title: "代表者", outline_content: "林　飛" },
-                { outline_title: "設立", outline_content: "平成6年10月（要確認）" },
+                { outline_title: "商号", outline_content: "有限会社ジェーアルシー" },
+                { outline_title: "代表者", outline_content: "一　鵬" },
+                { outline_title: "設立", outline_content: "平成6年6月20日" },
                 { outline_title: "登記", outline_content: "平成27年10月5日（要確認）" },
-                { outline_title: "資本金", outline_content: "1,000万円（要確認）" },
+                { outline_title: "資本金", outline_content: "2,500万円" },
                 { outline_title: "從業人數", outline_content: "正社員6名、アルバイト1名（要確認）" },
                 { outline_title: "事業內容", outline_content: "有限会社ジェーアルシー" },
             ],
             historyList: [
-                { history_time: "1994年 / 06月", history_text: "有限会社ジェーアルシー 設立 ビザ＆法務部門 設立" },
+                { history_time: "1994年 / 06月", history_text: "有限会社ジェーアルシー設立 ビザ＆法務部門設立" },
                 { history_time: "2017年 / 07月", history_text: "有料紹介＆労働派遣部門設立" },
                 { history_time: "2019年 / 10月", history_text: "登録支援機関許可取得" },
-                { history_time: "2022年 / 02月", history_text: "不動産部門設立" },
                 { history_time: "2022年 / 02月", history_text: "不動産部門設立" },
             ]
         }
@@ -142,6 +141,18 @@ export default {
         background-color: #131840;
         display: flex;
 
+        .outline_mainTitle::after {
+            content: "";
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            transform: rotate(45deg);
+            border-radius: 5px;
+            background-color: #BAA97D;
+            left: 80%;
+            top: 128%;
+        }
+
         .outline_mainTitle {
             width: 15%;
             display: flex;
@@ -203,18 +214,6 @@ export default {
             bottom: -158%;
         }
 
-        .history_title::after {
-            content: "";
-            position: absolute;
-            width: 45px;
-            height: 45px;
-            transform: rotate(45deg);
-            border-radius: 5px;
-            background-color: #BAA97D;
-            left: 80%;
-            top: 128%;
-        }
-
         .history_content {
             width: 80%;
             margin-top: 3%;
@@ -230,6 +229,72 @@ export default {
         height: 80vh;
     }
 
+}
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .aboutUs {
+        .aboutUs_serviceInfo_block {
+            display: block;
+            margin-left: 20%;
+        }
+
+        .aboutUs_serviceInfo_block_two {
+            margin-left: 21.5%;
+            white-space: unset;
+            margin-bottom: 0%;
+            width: 230px;
+        }
+
+        .outline_main {
+            height: 35vh;
+
+            .outline_mainTitle::after {
+                width: 20px;
+                height: 20px;
+                left: 83%;
+                top: 114%;
+            }
+
+            .outline_mainTitle {
+
+                h1 {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .outline_mainTitle::before {
+                width: 1px;
+                height: 200px;
+                left: 13%;
+                top: 115.5%
+            }
+        }
+
+        .history_main {
+            height: 25vh;
+
+            .history_title {
+                width: 10%;
+
+                h1 {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .history_title::before {
+                width: 1px;
+                height: 18%;
+                left: 13%;
+                bottom: 0;
+                top: 153%;
+            }
+
+        }
+
+        .serviceIcon {
+        height: 100vh;
+    }
+    }
 }
 
 //平板

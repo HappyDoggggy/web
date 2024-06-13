@@ -174,6 +174,62 @@ export default {
     }
 }
 
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .scrivener {
+        .scrivener_serviceInfo_block {
+            position: relative;
+            width: 70vw;
+            display: block;
+            margin-left: 22%;
+            margin-top: 20%;
+        }
+
+        .pictureIntro_two {
+            .pictureIntro_two_pic {
+                width: 100%;
+                height: 80%;
+                left: 0;
+            }
+
+            .text_content {
+                width: 100%;
+                left: 0;
+                border-radius: 0;
+
+                .text_content_h2 {
+                    font-size: 1.2rem;
+                }
+
+                .text_content_h2::before {
+                    bottom: 170px;
+                    height: 1%;
+                }
+
+                .text_content_h3 {
+                    font-size: 0.7rem;
+                }
+
+                .text_content_p1 {
+                    margin-top: 15%;
+                    font-size: 0.7rem;
+                }
+
+                .text_content_p2 {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        .scrivener_serviceInfo_block_two {
+            position: relative;
+            width: 70vw;
+            display: block;
+            margin-left: 22%;
+            margin-top: 25%;
+        }
+    }
+}
+
 @media screen and (min-width: 430px) and (max-width: 1024px) {
     .scrivener {
         .scrivener_serviceInfo_block {

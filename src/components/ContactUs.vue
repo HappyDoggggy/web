@@ -52,6 +52,31 @@
     }
 }
 
+@media screen and (min-width: 300px) and (max-width: 430px){
+    .contact {
+        height: 80%;
+
+        .contact_title::before {
+            bottom: 0;
+            top: 90px;
+            width: 45%;
+        }
+        .contact_text{
+            margin-top: 40px;
+            font-size: 0.8rem;
+        }
+        .contact_title{
+            font-size: 1.2rem;
+        }
+        .contact_button {
+        width: 100px;
+        height: 30px;
+        font-size: 0.7rem;
+        margin-top: 20px;
+    }
+    }
+}
+
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .contact {
         height: 80%;

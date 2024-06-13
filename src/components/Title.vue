@@ -55,6 +55,7 @@ export default {
         }
         .subtitle{
             font-size: 0.4rem;
+            width: 60px;
         }
     }
 }

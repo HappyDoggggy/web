@@ -20,7 +20,7 @@ export default {
 
 <template>
     <div class="banner">
-        <img class="banner_picture" :src="imgSrc" alt="" >
+        <img class="banner_picture" :src="imgSrc" alt="">
         <h2 class="one text">{{ this.textOne }}</h2>
         <h2 class="two text">{{ this.textTwo }}</h2>
     </div>
@@ -50,6 +50,14 @@ export default {
     .two {
         bottom: 7%;
         left: 5%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .banner {
+        .text {
+            font-size: 1.7rem;
+        }
     }
 }
 </style>

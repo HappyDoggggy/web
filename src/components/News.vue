@@ -91,6 +91,46 @@
 
 }
 
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .news_main {
+        display: block;
+
+        .news_text_block {
+            margin-left: 16%;
+
+            .news_text {
+                font-size: 1.4rem;
+            }
+        }
+
+        .news_news_block {
+            margin-left: 16%;
+
+            &::before {
+                top: 46%;
+                left: 16%;
+                width: 62%;
+            }
+
+            &::after {
+                top: 76%;
+                left: 16%;
+                width: 62%;
+            }
+
+            .date {
+                font-size: 0.5rem;
+            }
+
+            .info {
+                font-size: 0.7rem;
+                margin-bottom: 11%;
+            }
+        }
+
+    }
+}
+
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .news_main {
 

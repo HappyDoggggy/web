@@ -157,6 +157,12 @@ export default {
         .serviceIcon{
             height: 105vh;
         }
+        .wechat{
+            height: 60vh;
+        }
+        .news{
+            height: 40vh;
+        }
     }
 }
 
@@ -172,7 +178,7 @@ export default {
         }
 
         .analyticsBlock {
-            margin-left: 10%;
+            margin-left: 5%;
         }
 
         .serviceIcon {

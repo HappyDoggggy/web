@@ -102,15 +102,65 @@ export default {
     }
 
     .content_text_title::before {
-            content: "";
-            position: absolute;
-            width: 3%;
-            height: 2%;
-            background-color: #000;
-            left: 11.5%;
-            transform: translateX(-50%);
-            bottom: 57%;
+        content: "";
+        position: absolute;
+        width: 3%;
+        height: 2%;
+        background-color: #000;
+        left: 11.5%;
+        transform: translateX(-50%);
+        bottom: 57%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .content {
+        height: 80%;
+        .pic {
+            align-items: normal;
+            .content_picture {
+                width: 33%;
+                height: 100%;
+            }
         }
+
+        .content_text {
+            width: 100%;
+            left: 0;
+            bottom: -29%;
+            border-radius: 0;
+
+            .content_text_title {
+                .content_text_title_h2 {
+                    font-size: 1.2rem;
+                }
+
+                .content_text_title_h3 {
+                    font-size: 0.7rem;
+                }
+            }
+
+            .content_text_intro {
+                margin-top: 40px;
+
+                .content_text_intro_p1 {
+                    font-size: 0.7rem;
+                }
+
+                .content_text_intro_p2 {
+                    font-size: 0.7rem;
+                }
+            }
+
+            .content_text_title::before {
+                bottom: 0;
+                left: 12.5%;
+                top: 80px;
+                width: 5%;
+                height: 1.5%;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 431px) and (max-width: 1024px) {
@@ -121,14 +171,17 @@ export default {
                 height: 50%;
             }
         }
-        .content_text{
+
+        .content_text {
             width: 100%;
             left: 0;
-            .content_text_intro{
+
+            .content_text_intro {
                 margin-top: 60px;
             }
         }
-        .content_text_title::before{
+
+        .content_text_title::before {
             bottom: 71%;
             left: 12.5%;
             width: 5%;

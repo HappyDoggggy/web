@@ -173,11 +173,11 @@
         .homeBanner_mainPic {
             position: absolute;
             left: 0;
-            top: 10%;
+            top: 12%;
             z-index: -1;
 
             img {
-                width: 145%;
+                width: 143%;
                 height: 80%;
             }
 
@@ -193,7 +193,7 @@
             position: absolute;
             left: 0;
             bottom: 30%;
-            border-radius: 25px;
+            border-radius: 0px;
 
             .homeBanner_link_block {
                 margin-left: 40%;
@@ -215,6 +215,7 @@
 
             .homeBanner_main_title {
                 font-size: 1.5rem;
+                margin-top: 5%;
             }
 
             .homeBanner_link_text_en {
@@ -247,6 +248,7 @@
             position: absolute;
             left: 0;
             z-index: -1;
+            top: 13%;
 
             img {
                 width: 145%;
@@ -255,6 +257,18 @@
 
             &::before {
                 display: none;
+            }
+        }
+
+        .homeBanner_main_block {
+            margin-top: 5%;
+
+            .homeBanner_main_Text1 {
+                font-size: 4rem;
+            }
+
+            .homeBanner_main_Text2 {
+                font-size: 4rem;
             }
         }
 
@@ -269,6 +283,10 @@
 
             .homeBanner_link_block {
                 margin-left: 43%;
+            }
+
+            .homeBanner_main_title {
+                margin-top: 5%;
             }
         }
     }

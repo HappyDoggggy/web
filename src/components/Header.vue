@@ -69,8 +69,8 @@ export default {
     padding-left: 1%;
 
     .header_logo {
-        width: 300px;
-        height: 100%;
+        width: 260px;
+        height: 90%;
         background-image: url(../../public/LOGO.png);
         background-repeat: round;
 
@@ -165,6 +165,7 @@ export default {
 
             .info_link {
                 position: relative;
+
                 .info_link_block {
                     display: none;
                 }
@@ -183,30 +184,42 @@ export default {
                 width: 100%;
             }
         }
+
         .mail {
-                display: none;
-            }
+            display: none;
+        }
     }
 
 }
 
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .header_main {
+        .header_logo {
+            width: 310px;
+            height: 86%;
+        }
+
         .header_info {
-            .info_link_close{
+            .info_link_close {
                 display: none;
             }
+
             .header_info_block {
                 justify-content: flex-end;
+
                 .address {
                     margin-left: 10%;
                     margin-top: 3%;
                 }
-                .content{
+
+                .content {
                     margin-top: 3%;
                     width: 240px;
                 }
             }
+        }
+        .mail{
+            width: 8%;
         }
     }
 }

@@ -205,6 +205,89 @@ export default {
     }
 }
 
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .visa {
+        .visa_workingVisa {
+            margin-left: 0;
+            margin-bottom: 5%;
+            width: 100%;
+
+            .visa_workingVisa_text_title {
+
+                .visa_workingVisa_text_title_h2 {
+                    font-size: 1.2rem;
+                }
+
+                .visa_workingVisa_text_title_h3 {
+                    font-size: 0.7rem;
+                }
+            }
+
+            .visa_workingVisa_text_title::before {
+                height: 1.5%;
+            }
+
+            .visa_workingVisa_text_intro {
+
+                .visa_workingVisa_text_intro_p1 {
+                    font-size: 0.7rem;
+                }
+
+                .visa_workingVisa_text_intro_p2 {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        .pictureIntroTwo {
+            width: 100vw;
+            height: 80vh;
+        }
+
+        .pictureIntro_three {
+            .pictureIntro_three_pic {
+                width: 100%;
+                height: 80%;
+                left: 0;
+            }
+
+            .text_content_2 {
+                width: 100%;
+                left: 0;
+                border-radius: 0;
+                height: 30%;
+
+                .text_content_h2_2 {
+                    margin-left: 4%;
+                    font-size: 1.2rem;
+                }
+
+                .text_content_h2_2::before {
+                    bottom: 0;
+                    top: 80px;
+                    left: 4%;
+                }
+
+                .text_content_h3_2 {
+                    margin-left: 4%;
+                    font-size: 0.7rem;
+                }
+
+                .text_content_p1_2 {
+                    margin-left: 4%;
+                    font-size: 0.7rem;
+                    width: 350px;
+                }
+
+                .text_content_p2_2 {
+                    margin-left: 4%;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .visa {
         .visa_workingVisa {
@@ -226,9 +309,11 @@ export default {
             .text_content_2 {
                 width: 100%;
                 left: 0;
+
                 .text_content_h2_2 {
-                margin-left: 8%;
-            }
+                    margin-left: 8%;
+                }
+
                 .text_content_h2_2::before {
                     bottom: 65.5%;
                     left: 8%;
