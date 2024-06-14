@@ -19,7 +19,8 @@ export default {
     },
     data() {
         return {
-            bannerImage: '/Tokyo.jpg',
+            // bannerImage: "../../public/BANNER(ToKyo).png",
+            bannerImage: "../../public/ToKyo.jpg",
             bannerTextOne: 'お客様に感動を提供し、',
             bannerTextTwo: '社会の発展に貢献',
             title: "STRENGTH",
@@ -81,6 +82,7 @@ export default {
                 </div>
             </div>
         </div>
+        <img src="../../public/BANNER（ToKyo).png" alt="">
         <div class="history_main">
             <div class="history_title">
                 <h1>HISTORY</h1>
