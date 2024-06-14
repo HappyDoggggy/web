@@ -78,7 +78,7 @@
 }
 }
 
-@media screen and (min-width: 430px) and (max-width: 1024px) {
+@media screen and (min-width: 431px) and (max-width: 1024px) {
     .realEstateIcon {
         .realEstateIcon_picture {
             margin-left: 15%;

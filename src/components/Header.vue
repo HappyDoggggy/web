@@ -35,12 +35,14 @@ export default {
                 <span class="content">法務・留学・有料職業紹介・特定技能・不動産業務</span>
             </div>
             <div class="info_link_close">
-                <i class="fa-solid fa-xmark" @click="hidebar()"></i>
                 <RouterLink to="/" class="link">ホーム</RouterLink>
                 <RouterLink to="/AboutUs" class="link">会社案内</RouterLink>
                 <RouterLink to="/Scrivener" class="link">法務と行政書士</RouterLink>
                 <RouterLink to="/RealEstate" class="link">不動産</RouterLink>
                 <RouterLink to="/Visa" class="link">ビザサービズ</RouterLink>
+                <div class="xdiv">
+                    <i class="fa-solid fa-xmark" @click="hidebar()"></i>
+                </div>
             </div>
             <!-- 這是打叉圖，會先隱藏起來 -->
             <div class="info_link">
@@ -181,7 +183,35 @@ export default {
             }
 
             .info_link_close {
-                width: 100%;
+                width: 100dvw;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(28, 28, 27, 0.4);
+                backdrop-filter: blur(12px);
+
+                .link {
+                    color: white;
+                    align-items: center;
+                    font-size: 1.3rem;
+                    margin-bottom: 4%;
+                    text-decoration: none;
+                }
+
+                .xdiv {
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    border: 2pt white solid;
+                    border-radius: 100px;
+
+                    .fa-xmark {
+                        position: absolute;
+                        color: white;
+                        font-size: 1.3rem;
+                        top: 11%;
+                        left: 21%;
+                    }
+                }
             }
         }
 
@@ -218,7 +248,8 @@ export default {
                 }
             }
         }
-        .mail{
+
+        .mail {
             width: 8%;
         }
     }

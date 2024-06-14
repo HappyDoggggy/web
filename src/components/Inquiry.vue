@@ -420,7 +420,7 @@
     }
 }
 
-@media screen and (min-width: 430px) and (max-width: 1024px) {
+@media screen and (min-width: 431px) and (max-width: 1024px) {
     .inquiry_main {
         background-color: #F6F6F6;
         padding-top: 5%;

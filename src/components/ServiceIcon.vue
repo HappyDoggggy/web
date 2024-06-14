@@ -119,7 +119,7 @@ export default {
     }
 }
 
-@media screen and (min-width: 430px) and (max-width: 1024px) {
+@media screen and (min-width: 431px) and (max-width: 1024px) {
     .service {
         .title {
             box-sizing: border-box;
