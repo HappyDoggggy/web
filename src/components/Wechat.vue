@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="wechat_picture">
-            <img class="phone" src="../../public/messageImage_1716272865920.jpg" alt="">
+            <img class="phone" src="../../public/img1.png" alt="">
         </div>
     </div>
 </template>
@@ -27,6 +27,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../../public/A trustworthy partner.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
     .wechat_content {
         margin-top: 10%;

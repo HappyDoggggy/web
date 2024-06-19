@@ -45,7 +45,7 @@
                 <input type="submit" value="送信" class="submitBtn" />
             </form>
         </div>
-        <img src="../../public/man.jpg" alt="" class="pic_man">
+        <img src="../../public/index_contact_pic.svg" alt="" class="pic_man">
     </div>
 </template>
 
@@ -228,7 +228,7 @@
         position: absolute;
         width: 20%;
         height: 50%;
-        top: 50%;
+        top: 50.5%;
         left: 65%;
     }
 
@@ -590,14 +590,14 @@
             position: absolute;
             width: 20%;
             height: 50%;
-            top: 50%;
+            top: 56%;
             left: 70%;
         }
 
         &::before {
             content: '';
             position: absolute;
-            top: 45%;
+            top: 56%;
             left: 85%;
             width: 10%;
             height: 0.2%;
@@ -610,7 +610,7 @@
         &::after {
             content: 'お気軽にどうぞ';
             position: absolute;
-            top: 43%;
+            top: 53%;
             left: 80%;
             color: #131840;
             z-index: 1;

@@ -5,19 +5,19 @@
     <div class="realEstateIcon">
         <div class="realEstateIcon_picture">
             <div class="realEstateIcon_picture_1 picture">
-                <img src="../../public/building1.jpg" alt="">
+                <img src="../../public/ICON1.png" alt="">
                 <p class="realEstateIcon_picture_1_p1">不動産投資</p>
             </div>
             <div class="realEstateIcon_picture_2 picture">
-                <img src="../../public/building2.jpg" alt="">
+                <img src="../../public/ICON2.png" alt="">
                 <p class="realEstateIcon_picture_2_p2">不動産管理</p>
             </div>
             <div class="realEstateIcon_picture_3 picture">
-                <img src="../../public/building3.jpg" alt="">
+                <img src="../../public/ICON3.png" alt="">
                 <p class="realEstateIcon_picture_3_p3">売買及び賃貸</p>
             </div>
             <div class="realEstateIcon_picture_4 picture">
-                <img src="../../public/building4.jpg" alt="">
+                <img src="../../public/ICON4.png" alt="">
                 <p class="realEstateIcon_picture_4_p4">住宅ローン、保険等</p>
             </div>
         </div>
@@ -32,7 +32,7 @@
 
         .picture {
             img {
-                width: 50%;
+                width: 65%;
                 height: 80%;
             }
 

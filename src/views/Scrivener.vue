@@ -3,6 +3,7 @@ import Banner from '../components/Banner.vue';
 import PictureIntro from '../components/PictureIntro.vue';
 import ServiceInfo from '../components/ServiceInfo.vue';
 import ContactUs from '../components/ContactUs.vue';
+import MainInfo from '../components/MainInfo.vue';
 import { RouterView } from 'vue-router';
 export default {
     name: 'Scrivener',
@@ -11,6 +12,7 @@ export default {
         PictureIntro,
         ServiceInfo,
         ContactUs,
+        MainInfo,
         RouterView
     },
     data() {
@@ -18,6 +20,14 @@ export default {
             bannerImage: '/Scrivenerbanner.jpg',
             bannerTextOne: 'お客様に感動を提供し、',
             bannerTextTwo: '社会の発展に貢献',
+            //
+            mainInfo_text: "SCRIVENER",
+            mainInfo_subText: "法務と行政書士",
+            mainIntroP_1: "お客様のニーズをよく理解しており、",
+            mainIntroP_2: "お客様をより早く日本の社会に溶け込ませように頑張ります",
+            subIntro_1: "行政書士事務所は1994年（平成6年）6月に設立され、会社の一番目の部門です。ビザに関する業務を行っております。",
+            subIntro_2: "特に民事、刑事訴訟、離婚、財産相続等の案件が得意です。成功率が80％以上でございます。豊富な経験を持っております。",
+            //
             content_picture: '/LegalAffair.jpg',
             content_text_title_h2: '法務',
             content_text_title_h3: 'LEGAL AFFAIRS',
@@ -47,6 +57,10 @@ export default {
     <div class="scrivener">
         <div class="banner">
             <Banner :imgSrc="bannerImage" :textOne="bannerTextOne" :textTwo="bannerTextTwo" />
+        </div>
+        <div class="mainInfo">
+            <MainInfo :mainInfo_text="mainInfo_text" :mainInfo_subText="mainInfo_subText" :mainIntroP_1="mainIntroP_1"
+                :mainIntroP_2="mainIntroP_2" :subIntro_1="subIntro_1" :subIntro_2="subIntro_2" />
         </div>
         <div class="pictureIntro">
             <PictureIntro :imgSrc="content_picture" :textOne="content_text_title_h2" :textTwo="content_text_title_h3"
@@ -88,6 +102,11 @@ export default {
     .banner {
         width: 100vw;
         height: 60vh;
+    }
+
+    .mainInfo {
+        width: 100vw;
+        height: 70vh;
     }
 
     .pictureIntro {
@@ -232,6 +251,10 @@ export default {
 
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .scrivener {
+        .mainInfo {
+            height: 50vh;
+        }
+
         .scrivener_serviceInfo_block {
             display: flex;
             justify-content: space-around;

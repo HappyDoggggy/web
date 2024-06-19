@@ -61,7 +61,7 @@ export default {
 
 
                     <div class="menu_link">
-                        <p >
+                        <p>
                             <RouterLink to="/Scrivener" class="jap">法務と行政書士</RouterLink>
                         </p>
                         <p>
@@ -82,10 +82,10 @@ export default {
 
                     <div class="menu_link">
                         <p>
-                            <RouterLink to="/Visa"  class="jap">ビザサービズ</RouterLink>
+                            <RouterLink to="/Visa" class="jap">ビザサービズ</RouterLink>
                         </p>
                         <p>
-                            <RouterLink to="/Visa"  class="eng">VISA SERVICE</RouterLink>
+                            <RouterLink to="/Visa" class="eng">VISA SERVICE</RouterLink>
                         </p>
                     </div>
 
@@ -132,6 +132,7 @@ export default {
                 .name {
                     margin-bottom: 10px;
                 }
+
                 // .add{
                 //     font-size: 0.8rem;
                 // }
@@ -145,6 +146,7 @@ export default {
 
         .topRight {
             margin-right: 10%;
+
             .describe {
                 margin-top: 190px;
                 margin-left: 40px;
@@ -200,6 +202,41 @@ export default {
 
         p {
             color: #BAA97D;
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    .footerShow {
+
+        .top {
+            display: block;
+
+            .topLeft {
+
+                .address {
+                    font-size: 0.6rem;
+                    margin-top: 20px;
+                }
+
+                .license {
+                    margin-top: 30px;
+                    margin-left: 15%;
+                    font-size: 0.7rem;
+                }
+            }
+
+            .topRight {
+                margin-right: 10%;
+                display: none;
+            }
+        }
+
+        .bottom {
+
+            p {
+                font-size: 0.8rem;
+            }
         }
     }
 }

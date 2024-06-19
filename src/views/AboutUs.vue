@@ -5,6 +5,7 @@ import ServiceInfo from '../components/ServiceInfo.vue';
 import Outline from '../components/Outline.vue';
 import History from '../components/History.vue';
 import ServiceIcon from '../components/ServiceIcon.vue';
+import MainInfo from '../components/MainInfo.vue';
 import { RouterView } from 'vue-router';
 export default {
     name: 'AboutUs',
@@ -15,6 +16,7 @@ export default {
         Outline,
         History,
         ServiceIcon,
+        MainInfo,
         RouterView
     },
     data() {
@@ -23,6 +25,14 @@ export default {
             bannerImage: "../../public/ToKyo.jpg",
             bannerTextOne: 'お客様に感動を提供し、',
             bannerTextTwo: '社会の発展に貢献',
+            //
+            mainInfo_text: "ABOUT US",
+            mainInfo_subText: "会社案内",
+            mainIntroP_1: "お客様のニーズをよく理解しており、",
+            mainIntroP_2: "お客様をより早く日本の社会に溶け込ませように頑張ります。",
+            subIntro_1: "弊社は1994年（平成6年）に設立し、主に行政書士事務所、有料職業紹介＆労働派遣、不動産、特定技能支援機関で四つの部分が構成されます。東京に最も早く設立された中国人が経営する会社の一つです。",
+            subIntro_2: "弊社はビザ、法務、留学、有料職業紹介＆労働派遣、不動産の業務を行っております。多業種にかかわる会社です。社会的な責任を持ち、海外、在日華人華僑に向けてワンストップサービスを行うことができます。",
+            //
             title: "STRENGTH",
             subtitle: "弊社の強み",
             serviceInfoList: [
@@ -57,6 +67,10 @@ export default {
     <div class="aboutUs">
         <div class="banner">
             <Banner :imgSrc="bannerImage" :textOne="bannerTextOne" :textTwo="bannerTextTwo" />
+        </div>
+        <div class="mainInfo">
+            <MainInfo :mainInfo_text="mainInfo_text" :mainInfo_subText="mainInfo_subText" :mainIntroP_1="mainIntroP_1"
+                :mainIntroP_2="mainIntroP_2" :subIntro_1="subIntro_1" :subIntro_2="subIntro_2" />
         </div>
         <div class="aboutUs_title">
             <Title :title="title" :subtitle="subtitle" />
@@ -109,10 +123,16 @@ export default {
         height: 60vh;
     }
 
+    .mainInfo {
+        width: 100vw;
+        height: 70vh;
+    }
+
     .aboutUs_title {
         width: 15vw;
         height: 7vh;
         margin-left: 17%;
+        margin-top: 8%;
     }
 
     .aboutUs_serviceInfo_block {
@@ -135,6 +155,7 @@ export default {
         margin-left: 20.2%;
         white-space: nowrap;
         margin-bottom: 10%;
+        z-index: 2;
     }
 
     .outline_main {
@@ -152,7 +173,7 @@ export default {
             border-radius: 5px;
             background-color: #BAA97D;
             left: 80%;
-            top: 128%;
+            top: 212%;
         }
 
         .outline_mainTitle {
@@ -174,8 +195,8 @@ export default {
             width: 2px;
             height: 400px;
             background-color: #BAA97D;
-            left: 10%;
-            top: 130.5%
+            left: 12%;
+            top: 215%
         }
 
         .outline_text {
@@ -213,7 +234,7 @@ export default {
             height: 50%;
             background-color: #c5c5c5;
             left: 17%;
-            bottom: -158%;
+            bottom: -239%;
         }
 
         .history_content {
@@ -254,7 +275,7 @@ export default {
                 width: 20px;
                 height: 20px;
                 left: 83%;
-                top: 114%;
+                top: 187.5%;
             }
 
             .outline_mainTitle {
@@ -268,7 +289,7 @@ export default {
                 width: 1px;
                 height: 200px;
                 left: 13%;
-                top: 115.5%
+                top: 190%
             }
         }
 
@@ -288,27 +309,33 @@ export default {
                 height: 18%;
                 left: 13%;
                 bottom: 0;
-                top: 153%;
+                top: 227%;
             }
 
         }
 
         .serviceIcon {
-        height: 100vh;
-    }
+            height: 100vh;
+        }
     }
 }
 
 //平板
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .aboutUs {
+        .mainInfo{
+            height: 50vh;
+        }
         .outline_main {
             height: 38vh;
 
             .outline_mainTitle::before {
                 height: 285px;
-                top: 112.5%;
+                top: 168.5%;
                 left: 13%;
+            }
+            .outline_mainTitle::after{
+                top: 166%;
             }
         }
 
@@ -316,7 +343,7 @@ export default {
             height: 38dvh;
 
             .history_title::before {
-                bottom: -78%;
+                bottom: -135%;
                 left: 17.25%;
                 height: 26dvh;
             }

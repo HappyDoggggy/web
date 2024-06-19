@@ -24,19 +24,21 @@ import Inquiry from './components/Inquiry.vue';
     <div class="header">
       <Header />
     </div>
-    
+
     <div class="content">
       <RouterView />
     </div>
+    <!-- <div class="mainInfo">
+      <MainInfo />
+    </div> -->
+
+
     <!-- <div class="content">
       <RouterView />
     </div>
 
     <div class="banner">
       <Banner />
-    </div>
-    <div class="mainInfo">
-      <MainInfo />
     </div>
     <div class="pictureIntro">
       <PictureIntro />
@@ -77,6 +79,8 @@ import Inquiry from './components/Inquiry.vue';
     <!-- <div class="homeBanner">
       <HomeBanner />
     </div> -->
+
+
     <div class="footer">
       <Footer />
     </div>
@@ -172,5 +176,11 @@ import Inquiry from './components/Inquiry.vue';
 .footer {
   width: 100vw;
   height: 80vh;
+}
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+  .footer {
+    height: 50vh;
+  }
 }
 </style>

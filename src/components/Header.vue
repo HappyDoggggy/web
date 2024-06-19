@@ -73,7 +73,7 @@ export default {
     .header_logo {
         width: 260px;
         height: 90%;
-        background-image: url(../../public/LOGO.png);
+        background-image: url(../../public/LOGO2.png);
         background-repeat: round;
 
     }
@@ -227,6 +227,8 @@ export default {
         .header_logo {
             width: 310px;
             height: 86%;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
 
         .header_info {

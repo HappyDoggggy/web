@@ -3,6 +3,7 @@ import Banner from '../components/Banner.vue';
 import PictureIntro from '../components/PictureIntro.vue';
 import PictureIntroTwo from '../components/PictureIntroTwo.vue';
 import ContactUs from '../components/ContactUs.vue';
+import MainInfo from '../components/MainInfo.vue';
 import { RouterView } from 'vue-router';
 export default {
     name: 'Visa',
@@ -11,6 +12,7 @@ export default {
         PictureIntro,
         PictureIntroTwo,
         ContactUs,
+        MainInfo,
         RouterView
     },
     data() {
@@ -18,13 +20,19 @@ export default {
             bannerImage: '/visa.jpg',
             bannerTextOne: 'お客様に感動を提供し、',
             bannerTextTwo: '社会の発展に貢献',
+            //
+            mainInfo_text: "VISA SERVICES",
+            mainInfo_subText: "ビザサービス",
+            mainIntroP_1: "商用・留学・就労・特定技能ビザの手配は豊富な経験と多くの実績を持つ",
+            mainIntroP_2: "煩雑な手続きのサポートサービスを行っております",
+            //
             content_picture: '/student.jpg',
             content_text_title_h2: '留学ビザ',
             content_text_title_h3: 'STUDENT VISA',
             content_text_intro_p1: '弊社と提携する学院は多所があり、学生に豊富なコースが選択できます。日本語学校を卒業後、学生自身の状況に応じた様々な進路を推薦します。',
             content_text_intro_p2: '日本語学校が修了後、大学に落ちた留学生を提携大学への入学を推薦します。',
             //
-            content_picture_arr: ['/student.jpg', '/nurse.jpg', '/Tokyo.jpg'],
+            content_picture_arr: ['/VISA2.jpg', '/VISA3.jpg', '/VISA4.jpg'],
             content_text_title_h2_1: '有料職業紹介',
             content_text_title_h3_1: 'CHARGED EMPLOYMENT PLACEMENT BUSINESSES',
             content_text_intro_p1_1: '転職で失敗する人が多い裏側には、転職サイトやエージェントサービスごとに得意不得意があるという背景があります。あなたにおすすめの転職サービスを診断します',
@@ -47,6 +55,10 @@ export default {
     <div class="visa">
         <div class="banner">
             <Banner :imgSrc="bannerImage" :textOne="bannerTextOne" :textTwo="bannerTextTwo" />
+        </div>
+        <div class="mainInfo">
+            <MainInfo :mainInfo_text="mainInfo_text" :mainInfo_subText="mainInfo_subText" :mainIntroP_1="mainIntroP_1"
+                :mainIntroP_2="mainIntroP_2" />
         </div>
         <div class="pictureIntro">
             <PictureIntro :imgSrc="content_picture" :textOne="content_text_title_h2" :textTwo="content_text_title_h3"
@@ -87,6 +99,11 @@ export default {
     .banner {
         width: 100vw;
         height: 60vh;
+    }
+
+    .mainInfo {
+        width: 100vw;
+        height: 70vh;
     }
 
     .pictureIntro {
@@ -207,6 +224,7 @@ export default {
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .visa {
+
         .visa_workingVisa {
             margin-left: 0;
             margin-bottom: 5%;
@@ -290,6 +308,16 @@ export default {
 
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .visa {
+        .mainInfo {
+            height: 50vh;
+
+            .mainInfo_main {
+                .subIntro {
+                    display: none;
+                }
+            }
+        }
+
         .visa_workingVisa {
             width: 100%;
             margin-left: 0;
