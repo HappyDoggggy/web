@@ -21,9 +21,9 @@
                     <input type="text" class="firstName" placeholder="太郎">
                 </div>
                 <div class="inquiry_form_singleChoice_block">
-                    <input type="radio" class="singleChoice_radio1 radio">
+                    <input type="radio" name="phone" class="singleChoice_radio1 radio">
                     <label for="" class="singleChoice_phone">電話/携帯</label>
-                    <input type="radio" class="singleChoice_radio2 radio">
+                    <input type="radio" name="phone" class="singleChoice_radio2 radio">
                     <label for="" class="singleChoice_mail">メール</label>
                 </div>
                 <div class="inquiry_form_phone_block">
@@ -106,6 +106,8 @@
                 height: 35px;
                 border: white 0pt;
                 margin-left: 5.5%;
+                font-size: 1rem;
+                padding-left: 1%;
             }
 
             .firstName {
@@ -113,6 +115,8 @@
                 height: 35px;
                 border: white 0pt;
                 margin-left: 2.5%;
+                font-size: 1rem;
+                padding-left: 1%;
             }
         }
 
@@ -366,7 +370,7 @@
                 .inquiry_form_mail_text {
                     width: 72%;
                     height: 23px;
-                    margin-left: 12%;
+                    margin-left: 11%;
                 }
             }
 
@@ -380,7 +384,13 @@
                 .inquiry_form_mail_check_text {
                     width: 72%;
                     height: 23px;
-                    margin-left: 12%;
+                    margin-left: 11%;
+                }
+
+                &::before {
+                    top: 52%;
+                    left: 21%;
+                    font-size: 0.3rem;
                 }
             }
 
@@ -393,7 +403,7 @@
 
                 .inquiry_form_message_text {
                     width: 72%;
-                    height: 200px;
+                    height: 135px;
                     border: white 0pt;
                     margin-left: 1.9%;
                 }

@@ -129,10 +129,11 @@ export default {
         }
 
         .content_text_intro {
-            .content_text_intro_p1{
+            .content_text_intro_p1 {
                 font-size: 0.7rem;
                 margin-top: 15%;
             }
+
             .content_text_intro_p2 {
                 font-size: 0.7rem;
             }
@@ -154,13 +155,29 @@ export default {
             left: 0;
         }
 
+        .content_text::before {
+            bottom: 65.5%;
+        }
+
         .content_text {
             width: 100%;
             left: 0;
-        }
 
-        .content_text::before {
-            bottom: 65.5%;
+            .content_text_title {
+
+                .content_text_title_h2 {
+                    font-size: 2.2rem;
+                }
+
+                .content_text_title_h3 {
+                    font-size: 1.2rem;
+                }
+
+            }
+
+            .content_text_intro {
+                font-size: 1.2rem;
+            }
         }
     }
 }

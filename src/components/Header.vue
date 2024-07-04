@@ -90,7 +90,7 @@ export default {
 
             .address {
                 margin-top: 0.5%;
-                margin-left: 57.5%;
+                margin-left: 58.5%;
                 font-weight: bold;
                 font-size: 0.6rem;
             }
@@ -152,7 +152,7 @@ export default {
 
         .fa-envelope {
             color: #FDFDFD;
-            font-size: 15pt;
+            font-size: 20pt;
         }
     }
 }
@@ -178,7 +178,7 @@ export default {
                     z-index: 10;
                     position: absolute;
                     right: 3dvw;
-                    top: 2dvh;
+                    top: 2dvw;
                 }
             }
 

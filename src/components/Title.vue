@@ -27,6 +27,7 @@ export default {
 
 <style scoped lang="scss">
 .title_block {
+    margin-top: 60%;
 
     .title {
         width: 100%;
@@ -57,6 +58,12 @@ export default {
             font-size: 0.4rem;
             width: 60px;
         }
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px){
+    .title_block{
+        margin-left: -75%;
     }
 }
 </style>

@@ -58,7 +58,6 @@ export default {
 
     .serviceIcon {
         width: 100%;
-        height: 70%;
         background-color: #131840;
         display: flex;
         justify-content: space-evenly;

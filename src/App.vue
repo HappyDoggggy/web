@@ -98,89 +98,20 @@ import Inquiry from './components/Inquiry.vue';
   height: 7.87vh;
 }
 
-// .homeBanner {
-//   width: 100vw;
-//   height: 150vh;
-// }
-
-// .banner {
-//   width: 100vw;
-//   height: 60vh;
-// }
-
-// .mainInfo {
-//   width: 100vw;
-//   height: 70vh;
-// }
-
-// .pictureIntro {
-//   width: 100vw;
-//   height: 80vh;
-// }
-
-// .serviceInfo {
-//   width: 100vw;
-//   height: 30vh;
-// }
-
-// .outline {
-//   width: 100vw;
-//   height: 70vh;
-// }
-
-// .history {
-//   width: 100vw;
-//   height: 60vh;
-// }
-
-// .title {
-//   width: 12.66vw;
-//   height: 5.8vh;
-// }
-
-// .analytics {
-//   width: 15.52vw;
-//   height: 12.96vh;
-// }
-
-// .serviceIcon {
-//   width: 100vw;
-//   height: 60vh;
-// }
-
-// .wechat {
-//   width: 100vw;
-//   height: 60vh;
-// }
-
-// .news {
-//   width: 100vw;
-//   height: 50vh;
-// }
-
-// .inquiry {
-//   width: 100vw;
-//   height: 100vh;
-// }
-
-// .contactUs {
-//   width: 100vw;
-//   height: 40vh;
-// }
-
-// .realEstateIcon {
-//   width: 100vw;
-//   height: 40vh;
-// }
-
 .footer {
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
 }
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
   .footer {
-    height: 50vh;
+    height: 38vh;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px){
+  .footer{
+    height: 28vh;
   }
 }
 </style>

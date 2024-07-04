@@ -69,12 +69,13 @@ export default {
     .mainInfo {
         width: 100vw;
         height: 70vh;
+        margin-bottom: 10%;
     }
 
     .realEstate_title {
         width: 15vw;
         height: 7vh;
-        margin-left: 18%;
+        margin-left: 25%;
         margin-top: 5%;
     }
 
@@ -86,7 +87,7 @@ export default {
 
     .contactUs {
         width: 100vw;
-        height: 40vh;
+        height: 50vh;
     }
 }
 

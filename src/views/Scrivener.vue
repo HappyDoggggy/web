@@ -107,6 +107,7 @@ export default {
     .mainInfo {
         width: 100vw;
         height: 70vh;
+        margin-bottom: 10%;
     }
 
     .pictureIntro {
@@ -140,7 +141,7 @@ export default {
             height: 50%;
             background-color: white;
             border-radius: 20pt;
-            left: 50%;
+            left: 40%;
             top: 73%;
 
             .text_content_h2 {
@@ -168,6 +169,7 @@ export default {
             .text_content_p1 {
                 margin-top: 8%;
                 margin-left: 11%;
+                width: 700px;
             }
 
             .text_content_p2 {
@@ -231,10 +233,12 @@ export default {
                 .text_content_p1 {
                     margin-top: 15%;
                     font-size: 0.7rem;
+                    width: 280px;
                 }
 
                 .text_content_p2 {
                     font-size: 0.7rem;
+                    width: 280px;
                 }
             }
         }
@@ -244,7 +248,7 @@ export default {
             width: 70vw;
             display: block;
             margin-left: 22%;
-            margin-top: 25%;
+            margin-top: 30%;
         }
     }
 }
@@ -254,6 +258,10 @@ export default {
         .mainInfo {
             height: 50vh;
         }
+
+        .pictureIntro {
+        margin-bottom: 20%;
+    }
 
         .scrivener_serviceInfo_block {
             display: flex;
@@ -271,6 +279,10 @@ export default {
                 width: 100%;
                 left: 0;
 
+                .text_content_p1 {
+                    width: 650px;
+                }
+
                 .text_content_h2::before {
                     bottom: 65%;
                 }
@@ -286,11 +298,16 @@ export default {
         .scrivener_serviceInfo_block_two {
             margin-left: 25%;
             justify-content: space-around;
+            margin-top: 20%;
 
             .scrivener_serviceInfo_two {
                 width: 265px;
             }
         }
+        .contactUs {
+        width: 100vw;
+        height: 40vh;
+    }
     }
 }
 </style>

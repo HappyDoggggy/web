@@ -159,6 +159,23 @@
             display: flex;
             justify-content: flex-end;
         }
+        .wechat_content_label {
+
+            .wechat_content_label1 {
+                width: 100px;
+                height: 30px;
+            }
+
+            .wechat_content_label2 {
+                width: 100px;
+                height: 30px;
+            }
+
+            .wechat_content_label3 {
+                width: 100px;
+                height: 30px;
+            }
+        }
     }
 }
 </style>

@@ -90,8 +90,12 @@ export default {
                     </div>
 
                     <div class="menu_link">
-                        <p class="jap">聯絡我們</p>
-                        <p class="eng">CONTACT US</p>
+                        <p>
+                            <RouterLink to="/" class="jap">聯絡我們</RouterLink>
+                        </p>
+                        <p>
+                            <RouterLink to="/" class="eng">CONTACT US</RouterLink>
+                        </p>
                     </div>
 
                 </div>
@@ -103,9 +107,6 @@ export default {
     </div>
 </template>
 <style scoped lang="scss">
-.body {
-    margin: 0 auto;
-}
 
 .footerShow {
     height: 100%;
@@ -116,6 +117,7 @@ export default {
         width: 100%;
         height: 90%;
         display: flex;
+        justify-content: center;
 
         .topLeft {
             img {
@@ -129,13 +131,14 @@ export default {
                 margin-left: 15%;
                 margin-top: 40px;
 
+                .add{
+                    width: 390px;
+                }
+
                 .name {
                     margin-bottom: 10px;
                 }
 
-                // .add{
-                //     font-size: 0.8rem;
-                // }
             }
 
             .license {
@@ -145,7 +148,7 @@ export default {
         }
 
         .topRight {
-            margin-right: 10%;
+            margin-left: 5%;
 
             .describe {
                 margin-top: 190px;
@@ -208,12 +211,15 @@ export default {
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .footerShow {
-
         .top {
             display: block;
+            height: 235px;
 
             .topLeft {
 
+                img {
+                margin-top: 0;
+            }
                 .address {
                     font-size: 0.6rem;
                     margin-top: 20px;
@@ -235,7 +241,50 @@ export default {
         .bottom {
 
             p {
-                font-size: 0.8rem;
+                font-size: 0.6rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px){
+    .footerShow {
+        margin-top: 5%;
+        .top {
+            display: block;
+            height: 235px;
+            margin-left: 18%;
+
+            .topLeft {
+
+                img {
+                margin-top: 0;
+            }
+                .address {
+                    font-size: 0.7rem;
+                    margin-top: 20px;
+                }
+
+                .license {
+                    margin-top: 30px;
+                    margin-left: 15%;
+                    font-size: 0.8rem;
+                }
+            }
+
+            .topRight {
+                margin-right: 10%;
+                display: none;
+            }
+        }
+
+        .bottom {
+            height: 25%;
+            margin-top: 8%;
+            p {
+                font-size: 1rem;
+                font-weight: bold;
             }
         }
     }

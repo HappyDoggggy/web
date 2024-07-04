@@ -110,9 +110,8 @@ export default {
 
     .serviceIcon {
         width: 100vw;
-        height: 70vh;
+        height: 65vh;
         display: flex;
-        align-items: center;
     }
 
     .wechat {
@@ -155,7 +154,7 @@ export default {
             font-size: 0.6rem;
         }
         .serviceIcon{
-            height: 105vh;
+            height: 700px;
         }
         .wechat{
             height: 60vh;
@@ -184,6 +183,9 @@ export default {
         .serviceIcon {
             height: 50vh;
         }
+        .achievement {
+        font-size: 1.2rem;
+    }
     }
 }
 </style>

@@ -126,6 +126,7 @@ export default {
     .mainInfo {
         width: 100vw;
         height: 70vh;
+        margin-bottom: 15%;
     }
 
     .aboutUs_title {
@@ -163,8 +164,9 @@ export default {
         height: 74vh;
         background-color: #131840;
         display: flex;
+        position: relative;
 
-        .outline_mainTitle::after {
+        &::after {
             content: "";
             position: absolute;
             width: 45px;
@@ -172,8 +174,18 @@ export default {
             transform: rotate(45deg);
             border-radius: 5px;
             background-color: #BAA97D;
-            left: 80%;
-            top: 212%;
+            right: 180px;
+            top: -22px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 400px;
+            background-color: #BAA97D;
+            left: 180px;
+            top: 0px;
         }
 
         .outline_mainTitle {
@@ -187,16 +199,6 @@ export default {
                 font-size: 2.2rem;
                 color: white;
             }
-        }
-
-        .outline_mainTitle::before {
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: 400px;
-            background-color: #BAA97D;
-            left: 12%;
-            top: 215%
         }
 
         .outline_text {
@@ -233,8 +235,8 @@ export default {
             width: 2px;
             height: 50%;
             background-color: #c5c5c5;
-            left: 17%;
-            bottom: -239%;
+            left: 251px;
+            top: 2565px;
         }
 
         .history_content {
@@ -249,7 +251,7 @@ export default {
 
     .serviceIcon {
         width: 100vw;
-        height: 80vh;
+        height: 65vh;
     }
 
 }
@@ -274,8 +276,8 @@ export default {
             .outline_mainTitle::after {
                 width: 20px;
                 height: 20px;
-                left: 83%;
-                top: 187.5%;
+                left: 320px;
+                top: 190.5%;
             }
 
             .outline_mainTitle {
@@ -287,9 +289,9 @@ export default {
 
             .outline_mainTitle::before {
                 width: 1px;
-                height: 200px;
-                left: 13%;
-                top: 190%
+                height: 180px;
+                left: 50px;
+                top: 191.5%;
             }
         }
 
@@ -306,10 +308,10 @@ export default {
 
             .history_title::before {
                 width: 1px;
-                height: 18%;
-                left: 13%;
+                height: 150px;
+                left: 52px;
                 bottom: 0;
-                top: 227%;
+                top: 230%;
             }
 
         }
@@ -323,19 +325,20 @@ export default {
 //平板
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .aboutUs {
-        .mainInfo{
+        .mainInfo {
             height: 50vh;
         }
+
         .outline_main {
             height: 38vh;
 
-            .outline_mainTitle::before {
+            &::before {
                 height: 285px;
-                top: 168.5%;
-                left: 13%;
+                left: 12%;
             }
-            .outline_mainTitle::after{
-                top: 166%;
+
+            &::after {
+                right: 100px;
             }
         }
 
@@ -343,8 +346,9 @@ export default {
             height: 38dvh;
 
             .history_title::before {
-                bottom: -135%;
+                bottom: 0;
                 left: 17.25%;
+                top: 215%;
                 height: 26dvh;
             }
 
@@ -363,6 +367,4 @@ export default {
 
 }
 
-//電腦螢幕
-@media screen and (min-width: 1025px) {}
 </style>

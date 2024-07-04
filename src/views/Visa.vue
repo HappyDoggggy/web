@@ -324,7 +324,15 @@ export default {
 
             .visa_workingVisa_text_title::before {
                 bottom: 54%;
+                height: 4.5%;
             }
+
+            .visa_workingVisa_text_title {
+                .visa_workingVisa_text_title_h2 {
+                    font-size: 2.2rem;
+                }
+            }
+
         }
 
         .pictureIntro_three {
@@ -337,6 +345,7 @@ export default {
             .text_content_2 {
                 width: 100%;
                 left: 0;
+                height: 48%;
 
                 .text_content_h2_2 {
                     margin-left: 8%;

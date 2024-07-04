@@ -64,40 +64,33 @@ export default {
 
         .circle {
             width: 35%;
-            height: 100%;
+            height: 110%;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             background-image: url(../../public/cirle.png);
-            background-repeat: round;
+            background-repeat: no-repeat;
+            background-position: 50% 0;
 
             .textArea {
-                width: 50%;
                 height: 35%;
-                margin-left: 3.5%;
-                position: relative;
 
                 .mainInfo_text {
-                    width: 100%;
                     height: 45%;
                     font-size: 2rem;
                     color: #FFFFFF;
-                    margin-left: 15%;
                     font-weight: bold;
-                    position: absolute;
-                    left: 0;
+                    margin: 0 auto;
                 }
 
                 .mainInfo_subText {
-                    width: 38%;
                     height: 15%;
                     font-size: 0.8rem;
-                    margin-top: 10%;
                     color: #BAA97D;
-                    position: absolute;
-                    left: 33%;
-                    top: 40%;
+                    margin: 0 auto;
+                    text-align: center;
+                    margin-top: 20%;
                 }
             }
 
@@ -111,7 +104,7 @@ export default {
             background-color: #BAA97D;
             left: 50%;
             transform: translateX(-50%);
-            bottom: -26%;
+            bottom: -23%;
         }
     }
 
@@ -122,7 +115,7 @@ export default {
         text-align: center;
 
         .mainIntroP {
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             font-weight: bold;
         }
     }
@@ -134,11 +127,15 @@ export default {
         margin-bottom: 4%;
 
         .subIntro {
-            font-size: 0.9rem;
+            font-size: 1.2rem;
         }
 
         .subIntro_1 {
             margin-top: 5%;
+        }
+
+        .subIntro_2 {
+            margin-top: 8%;
         }
     }
 }
@@ -149,20 +146,30 @@ export default {
             .circle {
                 width: 55%;
                 height: 60%;
+                background-size: contain;
 
                 .textArea {
+                    text-align: center;
+                    margin-bottom: 10%;
+
                     .mainInfo_text {
                         font-size: 1.1rem;
                         margin-left: 3%;
                         width: 150px;
+                        text-align: center;
                     }
 
                     .mainInfo_subText {
                         font-size: 0.6rem;
-                        margin-left: -5%;
                         width: 68px;
+                        text-align: center;
+                        margin-top: 8%;
                     }
                 }
+            }
+
+            .circle::before {
+                height: 55%;
             }
         }
 
@@ -207,24 +214,32 @@ export default {
                     .mainInfo_text {
                         margin-left: 3%;
                         width: 241px;
+                        text-align: center;
+                        font-size: 1.8rem;
                     }
 
                     .mainInfo_subText {
                         width: 52%;
+                        text-align: center;
+                        font-size: 1rem;
+                        margin-top: 8%;
                     }
                 }
             }
 
             .circle::before {
                 height: 36%;
-                bottom: -20%;
+                bottom: -25%;
             }
         }
 
         .mainIntro {
             margin-top: 3%;
 
-            .mainIntroP {}
+            .mainIntroP {
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
         }
 
         .subIntro {
@@ -233,14 +248,15 @@ export default {
 
             .subIntro {
                 margin-top: 5%;
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
 
             .subIntro_1 {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
-            .subIntro_2{
-                margin-top: 8%;
+
+            .subIntro_2 {
+                margin-top: 12%;
             }
         }
     }

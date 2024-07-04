@@ -49,7 +49,7 @@
         position: relative;
 
         .text {
-            font-size: 5rem;
+            font-size: 5.6rem;
             font-weight: bold;
             margin-left: 5%;
         }
@@ -66,16 +66,21 @@
 
     .homeBanner_mainPic {
         position: absolute;
-        width: 70%;
-        height: 50%;
+        width: 80%;
+        height: 60%;
         right: 0;
         z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
 
         &::before {
             content: 'JRC';
             position: absolute;
-            top: 65%;
-            left: -26%;
+            top: 370px;
+            left: -120px;
             color: #BAA97D;
             writing-mode: vertical-rl;
         }
@@ -83,7 +88,7 @@
 
     .homeBanner_main_info_block {
         width: 50%;
-        height: 25%;
+        height: 15%;
         background-color: white;
         position: absolute;
         left: 15%;
@@ -177,7 +182,7 @@
             z-index: -1;
 
             img {
-                width: 143%;
+                width: 120%;
                 height: 80%;
             }
 
@@ -251,7 +256,7 @@
             top: 13%;
 
             img {
-                width: 145%;
+                width: 125%;
                 height: 80%;
             }
 
@@ -283,10 +288,37 @@
 
             .homeBanner_link_block {
                 margin-left: 43%;
+
+                .homeBanner_link_text_block {
+                    .homeBanner_link_text {
+                        font-size: 1.6rem;
+                    }
+
+                    .homeBanner_link_text_en {
+                        font-size: 1rem;
+                    }
+                }
+
+                .fa-solid {
+                    font-size: 1.6rem;
+                }
             }
 
             .homeBanner_main_title {
                 margin-top: 5%;
+                font-size: 2.5rem;
+            }
+
+            .homeBanner_main_title_en {
+                font-size: 1.2rem;
+            }
+
+            .homeBanner_main_content1 {
+                font-size: 1.4rem;
+            }
+
+            .homeBanner_main_content2 {
+                font-size: 1.4rem;
             }
         }
     }

@@ -37,7 +37,7 @@
         margin-left: 10%;
 
         .news_text {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             font-weight: bold;
         }
     }
@@ -53,7 +53,7 @@
             position: absolute;
             top: 46%;
             left: 33%;
-            width: 45%;
+            width: 55%;
             height: 0.5%;
             background-color: #131840;
             z-index: 1;
@@ -64,7 +64,7 @@
             position: absolute;
             top: 71%;
             left: 33%;
-            width: 45%;
+            width: 55%;
             height: 0.5%;
             background-color: #131840;
             z-index: 1;
@@ -72,14 +72,14 @@
 
         .date {
             color: #BAA97D;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             margin-left: 1%;
             margin-bottom: 1%;
 
         }
 
         .info {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             margin-bottom: 3%;
             color: black;
         }
@@ -135,6 +135,7 @@
     .news_main {
 
         .news_text_block {
+            margin-left: 6%;
             .news_text {
                 margin-top: 250%;
 
@@ -143,16 +144,18 @@
 
         .news_news_block {
             margin-top: 20%;
+            margin-left: 8%;
 
             &::before {
                 content: '';
                 position: absolute;
                 top: 63%;
                 left: 33%;
-                width: 500px;
+                width: 650px;
                 height: 0.5%;
                 background-color: #131840;
                 z-index: 1;
+                display: none;
             }
 
             &::after {
@@ -160,15 +163,17 @@
                 position: absolute;
                 top: 80%;
                 left: 33%;
-                width: 500px;
+                width: 650px;
                 height: 0.5%;
                 background-color: #131840;
                 z-index: 1;
+                display: none;
             }
 
             .info {
-                font-size: 1rem;
+                font-size: 1.1rem;
                 width: 700px;
+                text-decoration: underline;
             }
         }
     }
