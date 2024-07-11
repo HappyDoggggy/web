@@ -48,8 +48,28 @@ export default {
             ],
         }
     },
-    methods: {},
-    mounted() { }
+    methods: {
+        serviceIconAnimation(target) {
+            const option = {
+                threshold: 0.5
+            };
+            const callback = (entries, observer) => {
+                if (entries[0].isIntersecting) {
+                    target.classList.add("anime");
+                }
+            };
+            const observer = new IntersectionObserver(callback, option);
+            observer.observe(target);
+        },
+    },
+    mounted() {
+        this.serviceIconAnimation(document.querySelector(".scrivener_serviceInfo_block"))
+        this.serviceIconAnimation(document.querySelector(".scrivener_serviceInfo_block_two"))
+        this.serviceIconAnimation(document.querySelector(".text_content_h2"))
+        this.serviceIconAnimation(document.querySelector(".text_content_h3"))
+        this.serviceIconAnimation(document.querySelector(".text_content_p1"))
+        this.serviceIconAnimation(document.querySelector(".text_content_p2"))
+    }
 }
 </script>
 
@@ -121,6 +141,11 @@ export default {
         display: flex;
         margin-left: 22%;
         margin-top: 15%;
+        opacity: 0;
+        transition-property: filter, opacity, transform;
+        transition-duration: 2s;
+        transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+        filter: blur(0);
     }
 
     .pictureIntro_two {
@@ -130,8 +155,7 @@ export default {
         margin-top: 10%;
 
         .pictureIntro_two_pic {
-            width: 70%;
-            height: 100%;
+            max-width: 100%;
             position: absolute;
         }
 
@@ -144,37 +168,62 @@ export default {
             left: 40%;
             top: 73%;
 
+            &::before {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 5px;
+                background-color: #000;
+                left: 11%;
+                top: 45%;
+            }
+
             .text_content_h2 {
                 margin-top: 6%;
                 margin-left: 10%;
                 font-size: 2rem;
-            }
-
-            .text_content_h2::before {
-                content: "";
-                position: absolute;
-                width: 5%;
-                height: 2%;
-                background-color: #000;
-                left: 11%;
-                bottom: 55%;
+                opacity: 0;
+                transition-property: filter, opacity, transform;
+                transition-duration: 2s;
+                transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+                filter: blur(0);
             }
 
             .text_content_h3 {
                 margin-top: 0.5%;
                 margin-left: 11%;
                 color: #B09D6B;
+                opacity: 0;
+                transition-property: filter, opacity, transform;
+                transition-duration: 2s;
+                transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+                filter: blur(0);
             }
 
             .text_content_p1 {
                 margin-top: 8%;
                 margin-left: 11%;
                 width: 700px;
+                opacity: 0;
+                transition-property: filter, opacity, transform;
+                transition-duration: 2s;
+                transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+                filter: blur(0);
             }
 
             .text_content_p2 {
                 margin-top: 5.5%;
                 margin-left: 11%;
+                opacity: 0;
+                transition-property: filter, opacity, transform;
+                transition-duration: 2s;
+                transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+                filter: blur(0);
+            }
+
+            .anime {
+                opacity: 1;
+                transform: translateZ(0);
             }
         }
     }
@@ -186,6 +235,11 @@ export default {
         flex-wrap: wrap;
         margin-left: 30%;
         margin-top: 15%;
+        opacity: 0;
+        transition-property: filter, opacity, transform;
+        transition-duration: 2s;
+        transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+        filter: blur(0);
     }
 
     .contactUs {
@@ -193,22 +247,32 @@ export default {
         height: 40vh;
         margin-top: 10%;
     }
+
+    .anime {
+        opacity: 1;
+        transform: translateZ(0);
+    }
 }
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .scrivener {
+        .banner {
+            height: 37.3vh;
+        }
+
         .scrivener_serviceInfo_block {
             position: relative;
             width: 70vw;
             display: block;
             margin-left: 22%;
-            margin-top: 20%;
+            margin-top: 0;
         }
 
         .pictureIntro_two {
+            height: 55vh;
+
             .pictureIntro_two_pic {
-                width: 100%;
-                height: 80%;
+                max-width: 100%;
                 left: 0;
             }
 
@@ -217,14 +281,16 @@ export default {
                 left: 0;
                 border-radius: 0;
 
+                &::before {
+                    top: 95px;
+                    width: 20px;
+                    height: 3px;
+                }
+
                 .text_content_h2 {
                     font-size: 1.2rem;
                 }
 
-                .text_content_h2::before {
-                    bottom: 170px;
-                    height: 1%;
-                }
 
                 .text_content_h3 {
                     font-size: 0.7rem;
@@ -248,20 +314,24 @@ export default {
             width: 70vw;
             display: block;
             margin-left: 22%;
-            margin-top: 30%;
+            margin-top: 45%;
         }
     }
 }
 
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .scrivener {
+        .banner {
+            height: 49.9vh;
+        }
+
         .mainInfo {
             height: 50vh;
         }
 
         .pictureIntro {
-        margin-bottom: 20%;
-    }
+            margin-bottom: 20%;
+        }
 
         .scrivener_serviceInfo_block {
             display: flex;
@@ -270,8 +340,7 @@ export default {
 
         .pictureIntro_two {
             .pictureIntro_two_pic {
-                width: 100%;
-                height: 80%;
+                max-width: 100%;
                 left: 0;
             }
 
@@ -283,8 +352,8 @@ export default {
                     width: 650px;
                 }
 
-                .text_content_h2::before {
-                    bottom: 65%;
+                &::before {
+                    top: 37%;
                 }
             }
         }
@@ -304,10 +373,11 @@ export default {
                 width: 265px;
             }
         }
+
         .contactUs {
-        width: 100vw;
-        height: 40vh;
-    }
+            width: 100vw;
+            height: 40vh;
+        }
     }
 }
 </style>

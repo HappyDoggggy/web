@@ -93,6 +93,9 @@ export default {
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .realestate {
+        .banner{
+            height: 37.3vh;
+        }
         .realEstate_title {
             width: 15vw;
             height: 7vh;
@@ -108,6 +111,9 @@ export default {
 
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .realestate {
+        .banner{
+            height: 49.9vh;
+        }
         .mainInfo {
             height: 50vh;
         }
@@ -115,6 +121,10 @@ export default {
         .realEstateIcon {
             height: 20vh;
             margin-right: 10%;
+        }
+
+        .realEstate_title {
+            margin-left: 12%;
         }
     }
 }

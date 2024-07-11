@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div class="title_block">
-        <p class="title block">
+        <p class="title block enWord">
             {{ this.title }}
         </p>
         <p class="subtitle block">
@@ -27,7 +27,9 @@ export default {
 
 <style scoped lang="scss">
 .title_block {
-    margin-top: 60%;
+    margin: 0 auto;
+    margin-top: 40%;
+    width: 200px;
 
     .title {
         width: 100%;
@@ -55,15 +57,15 @@ export default {
             font-size: 1.3rem;
         }
         .subtitle{
-            font-size: 0.4rem;
-            width: 60px;
+            font-size: 0.8rem;
+            width: 100px;
         }
     }
 }
 
 @media screen and (min-width: 431px) and (max-width: 1024px){
     .title_block{
-        margin-left: -75%;
+        // margin-left: 12%;
     }
 }
 </style>

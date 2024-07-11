@@ -35,14 +35,13 @@ export default {
                 <span class="content">法務・留学・有料職業紹介・特定技能・不動産業務</span>
             </div>
             <div class="info_link_close">
-                <RouterLink to="/" class="link">ホーム</RouterLink>
-                <RouterLink to="/AboutUs" class="link">会社案内</RouterLink>
-                <RouterLink to="/Scrivener" class="link">法務と行政書士</RouterLink>
-                <RouterLink to="/RealEstate" class="link">不動産</RouterLink>
-                <RouterLink to="/Visa" class="link">ビザサービズ</RouterLink>
-                <div class="xdiv">
-                    <i class="fa-solid fa-xmark" @click="hidebar()"></i>
-                </div>
+                <RouterLink to="/" class="link" @click="hidebar()">ホーム</RouterLink>
+                <RouterLink to="/AboutUs" class="link" @click="hidebar()">会社案内</RouterLink>
+                <RouterLink to="/Scrivener" class="link" @click="hidebar()">法務と行政書士</RouterLink>
+                <RouterLink to="/RealEstate" class="link" @click="hidebar()">不動産</RouterLink>
+                <RouterLink to="/Visa" class="link" @click="hidebar()">ビザサービズ</RouterLink>
+                <i class="fa-solid fa-xmark" @click="hidebar()"></i>
+
             </div>
             <!-- 這是打叉圖，會先隱藏起來 -->
             <div class="info_link">
@@ -186,32 +185,33 @@ export default {
                 width: 100dvw;
                 align-items: center;
                 justify-content: center;
-                background-color: rgb(28, 28, 27, 0.4);
-                backdrop-filter: blur(12px);
+                background-color: white;
+                gap: 40px;
+
 
                 .link {
-                    color: white;
+                    color: black;
                     align-items: center;
-                    font-size: 1.3rem;
+                    font-size: 1.5rem;
                     margin-bottom: 4%;
                     text-decoration: none;
                 }
 
-                .xdiv {
-                    position: relative;
-                    width: 30px;
-                    height: 30px;
-                    border: 2pt white solid;
-                    border-radius: 100px;
+                // .xdiv {
+                //     position: relative;
+                //     width: 30px;
+                //     height: 30px;
+                //     border: 2pt black solid;
+                //     border-radius: 100px;
 
                     .fa-xmark {
                         position: absolute;
-                        color: white;
-                        font-size: 1.3rem;
-                        top: 11%;
-                        left: 21%;
+                        color: black;
+                        font-size: 1.4rem;
+                        top: 15%;
+                        right: 20%;
                     }
-                }
+                // }
             }
         }
 

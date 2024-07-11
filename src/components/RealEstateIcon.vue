@@ -24,11 +24,12 @@
 .realEstateIcon {
     .realEstateIcon_picture {
         display: flex;
-        margin-left: 25%;
+        justify-content: center;
+        margin: 0 auto;
+        width: 70%;
 
         .picture {
-            width: 200px;
-
+            width: 20%;
             img {
                 width: 100%;
                 height: 100%;
@@ -41,25 +42,12 @@
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .realEstateIcon {
         .realEstateIcon_picture {
-            margin-left: 10%;
-            display: flex;
+            width: 92%;
 
             .picture {
                 img {
-                    width: 80%;
-                    height: 80%;
-                }
-
-                p {
-                    margin-left: 5%;
-                    color: #131840;
-                    font-size: 0.5rem;
-                }
-            }
-
-            .realEstateIcon_picture_4 {
-                .realEstateIcon_picture_4_p4 {
-                    margin-left: -10%;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
@@ -69,16 +57,12 @@
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .realEstateIcon {
         .realEstateIcon_picture {
-            margin-left: 9%;
-
+            width: 87%;
+            justify-content: space-around;
             .picture {
                 img {
-                    width: 80%;
-                    height: 80%;
-                }
-
-                p {
-                    margin-left: 2%;
+                    width: 100%;
+                    height: 100%;
                 }
             }
 

@@ -46,8 +46,28 @@ export default {
             //
         }
     },
-    methods: {},
-    mounted() { }
+    methods: {
+        serviceIconAnimation(target) {
+            const option = {
+                threshold: 0.5
+            };
+            const callback = (entries, observer) => {
+                if (entries[0].isIntersecting) {
+                    target.classList.add("anime");
+                }
+            };
+            const observer = new IntersectionObserver(callback, option);
+            observer.observe(target);
+        },
+    },
+    mounted() {
+        this.serviceIconAnimation(document.querySelector(".visa_workingVisa_text_title"))
+        this.serviceIconAnimation(document.querySelector(".visa_workingVisa_text_intro"))
+        this.serviceIconAnimation(document.querySelector(".text_content_h2_2"))
+        this.serviceIconAnimation(document.querySelector(".text_content_h3_2"))
+        this.serviceIconAnimation(document.querySelector(".text_content_p1_2"))
+        this.serviceIconAnimation(document.querySelector(".text_content_p2_2"))
+    }
 }
 </script>
 
@@ -119,9 +139,24 @@ export default {
         height: 50%;
         position: relative;
 
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            background-color: #000;
+            left: 10%;
+            top: 38%;
+        }
+
         .visa_workingVisa_text_title {
             margin-top: 6%;
             margin-left: 10%;
+            opacity: 0;
+            transition-property: filter, opacity, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+            filter: blur(0);
 
             .visa_workingVisa_text_title_h2 {
                 font-size: 2rem;
@@ -132,25 +167,25 @@ export default {
             }
         }
 
-        .visa_workingVisa_text_title::before {
-            content: "";
-            position: absolute;
-            width: 5%;
-            height: 3%;
-            background-color: #000;
-            left: 12.5%;
-            transform: translateX(-50%);
-            bottom: 60%;
-        }
 
         .visa_workingVisa_text_intro {
             margin-top: 8%;
             margin-left: 10%;
             margin-right: 10%;
+            opacity: 0;
+            transition-property: filter, opacity, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+            filter: blur(0);
 
             .visa_workingVisa_text_intro_p2 {
                 margin-top: 3%;
             }
+        }
+
+        .anime {
+            opacity: 1;
+            transform: translateZ(0);
         }
     }
 
@@ -167,50 +202,76 @@ export default {
         margin-bottom: 10%;
 
         .pictureIntro_three_pic {
-            width: 70%;
-            height: 100%;
+            max-width: 100%;
             position: absolute;
         }
 
         .text_content_2 {
+            position: relative;
             position: absolute;
             width: 45%;
             height: 50%;
             background-color: white;
             border-radius: 20pt;
             left: 40%;
-            top: 65%;
+            top: 70%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 5px;
+                background-color: #000;
+                left: 11%;
+                top: 42%;
+            }
 
             .text_content_h2_2 {
                 margin-top: 6%;
                 margin-left: 10%;
                 font-size: 2rem;
+                opacity: 0;
+                transition-property: filter, opacity, transform;
+                transition-duration: 2s;
+                transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+                filter: blur(0);
             }
 
-            .text_content_h2_2::before {
-                content: "";
-                position: absolute;
-                width: 5%;
-                height: 2%;
-                background-color: #000;
-                left: 11%;
-                bottom: 55%;
-            }
 
             .text_content_h3_2 {
                 margin-top: 0.5%;
                 margin-left: 11%;
                 color: #B09D6B;
+                opacity: 0;
+                transition-property: filter, opacity, transform;
+                transition-duration: 2s;
+                transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+                filter: blur(0);
             }
 
             .text_content_p1_2 {
                 margin-top: 8%;
                 margin-left: 11%;
+                opacity: 0;
+                transition-property: filter, opacity, transform;
+                transition-duration: 2s;
+                transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+                filter: blur(0);
             }
 
             .text_content_p2_2 {
                 margin-top: 5%;
                 margin-left: 11%;
+                opacity: 0;
+                transition-property: filter, opacity, transform;
+                transition-duration: 2s;
+                transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+                filter: blur(0);
+            }
+
+            .anime {
+                opacity: 1;
+                transform: translateZ(0);
             }
         }
     }
@@ -224,11 +285,25 @@ export default {
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .visa {
+        .banner {
+            height: 37.3vh;
+        }
+
+        .pictureIntro {
+            height: 67vh;
+        }
 
         .visa_workingVisa {
             margin-left: 0;
             margin-bottom: 5%;
             width: 100%;
+            margin-top: 0;
+
+            &::before {
+                top: 55px;
+                width: 20px;
+                height: 3px;
+            }
 
             .visa_workingVisa_text_title {
 
@@ -241,9 +316,6 @@ export default {
                 }
             }
 
-            .visa_workingVisa_text_title::before {
-                height: 1.5%;
-            }
 
             .visa_workingVisa_text_intro {
 
@@ -259,13 +331,15 @@ export default {
 
         .pictureIntroTwo {
             width: 100vw;
-            height: 80vh;
+            height: 43vh;
         }
 
         .pictureIntro_three {
+            height: 46vh;
+            margin-bottom: 30%;
+
             .pictureIntro_three_pic {
-                width: 100%;
-                height: 80%;
+                max-width: 100%;
                 left: 0;
             }
 
@@ -275,30 +349,32 @@ export default {
                 border-radius: 0;
                 height: 30%;
 
+                &::before {
+                    left: 10%;
+                    top: 82px;
+                    width: 20px;
+                    height: 3px;
+                }
+
                 .text_content_h2_2 {
-                    margin-left: 4%;
+                    margin-left: 10%;
                     font-size: 1.2rem;
                 }
 
-                .text_content_h2_2::before {
-                    bottom: 0;
-                    top: 80px;
-                    left: 4%;
-                }
 
                 .text_content_h3_2 {
-                    margin-left: 4%;
+                    margin-left: 10%;
                     font-size: 0.7rem;
                 }
 
                 .text_content_p1_2 {
-                    margin-left: 4%;
+                    margin-left: 10%;
                     font-size: 0.7rem;
-                    width: 350px;
+                    width: 300px;
                 }
 
                 .text_content_p2_2 {
-                    margin-left: 4%;
+                    margin-left: 10%;
                     font-size: 0.7rem;
                 }
             }
@@ -308,6 +384,10 @@ export default {
 
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .visa {
+        .banner {
+            height: 49.9vh;
+        }
+
         .mainInfo {
             height: 50vh;
 
@@ -322,9 +402,8 @@ export default {
             width: 100%;
             margin-left: 0;
 
-            .visa_workingVisa_text_title::before {
-                bottom: 54%;
-                height: 4.5%;
+            &::before {
+                top: 45%;
             }
 
             .visa_workingVisa_text_title {
@@ -335,10 +414,13 @@ export default {
 
         }
 
+        .pictureIntroTwo {
+            height: 60vh;
+        }
+
         .pictureIntro_three {
             .pictureIntro_three_pic {
-                width: 100%;
-                height: 80%;
+                max-width: 100%;
                 left: 0;
             }
 
@@ -346,15 +428,17 @@ export default {
                 width: 100%;
                 left: 0;
                 height: 48%;
+                border-radius: 0pt;
+
+                &::before {
+                    left: 8%;
+                    top: 37%;
+                }
 
                 .text_content_h2_2 {
                     margin-left: 8%;
                 }
 
-                .text_content_h2_2::before {
-                    bottom: 65.5%;
-                    left: 8%;
-                }
 
                 .text_content_h3_2 {
                     margin-left: 8%;

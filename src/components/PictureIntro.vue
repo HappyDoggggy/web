@@ -1,6 +1,10 @@
 <script>
 export default {
     name: 'PictureIntro',
+    data() { // data = funtion(){}
+        return {
+        }
+    },
     props: {
         imgSrc: {
             type: String,
@@ -22,6 +26,24 @@ export default {
             type: String,
             required: true
         }
+    },
+    methods: {
+        serviceIconAnimation(target) {
+            const option = {
+                threshold: 0.5
+            };
+            const callback = (entries, observer) => {
+                if (entries[0].isIntersecting) {
+                    target.classList.add("anime");
+                }
+            };
+            const observer = new IntersectionObserver(callback, option);
+            observer.observe(target);
+        },
+    },
+    mounted() {
+        this.serviceIconAnimation(document.querySelector(".content_text_title"))
+        this.serviceIconAnimation(document.querySelector(".content_text_intro"))
     }
 }
 </script>
@@ -49,11 +71,10 @@ export default {
     position: relative;
 
     .content_picture {
-        width: 70%;
-        height: 100%;
         position: absolute;
         left: 30%;
         margin-top: 5%;
+        max-width: 100%;
     }
 
     .content_text {
@@ -65,9 +86,24 @@ export default {
         left: 15%;
         bottom: -20%;
 
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            background-color: #000;
+            left: 10%;
+            top: 38%;
+        }
+
         .content_text_title {
             margin-top: 6%;
             margin-left: 10%;
+            opacity: 0;
+            transition-property: filter, opacity, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+            filter: blur(0);
 
             .content_text_title_h2 {
                 font-size: 2rem;
@@ -83,30 +119,31 @@ export default {
             margin-top: 8%;
             margin-left: 10%;
             margin-right: 10%;
+            opacity: 0;
+            transition-property: filter, opacity, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+            filter: blur(0);
 
             .content_text_intro_p2 {
                 margin-top: 3%;
             }
         }
+
+        .anime {
+            opacity: 1;
+            transform: translateZ(0);
+        }
     }
 
-    .content_text::before {
-        content: "";
-        position: absolute;
-        width: 5%;
-        height: 2%;
-        background-color: #000;
-        left: 12.5%;
-        transform: translateX(-50%);
-        bottom: 60%;
-    }
 }
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .content {
+        height: 71%;
+
         .content_picture {
-            width: 100%;
-            height: 80%;
+            max-width: 100%;
             left: 0;
         }
 
@@ -114,6 +151,13 @@ export default {
             width: 100%;
             left: 0;
             border-radius: 0;
+            bottom: -20%;
+
+            &::before {
+                top: 85px;
+                width: 20px;
+                height: 3px;
+            }
 
             .content_text_title {
 
@@ -139,29 +183,24 @@ export default {
             }
         }
 
-        .content_text::before {
-            bottom: 0;
-            top: 85px;
-            height: 1%;
-        }
     }
 }
 
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .content {
         .content_picture {
-            width: 100%;
-            height: 80%;
+            max-width: 100%;
             left: 0;
-        }
-
-        .content_text::before {
-            bottom: 65.5%;
         }
 
         .content_text {
             width: 100%;
             left: 0;
+
+            &::before {
+                left: 10%;
+                top: 34%;
+            }
 
             .content_text_title {
 

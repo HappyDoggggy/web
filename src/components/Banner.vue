@@ -55,8 +55,25 @@ export default {
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .banner {
+        .banner_picture {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+        }
+
         .text {
-            font-size: 1.7rem;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 1024px) {
+    .banner {
+
+        .banner_picture {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
         }
     }
 }

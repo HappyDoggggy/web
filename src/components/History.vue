@@ -45,14 +45,14 @@ export default {
         font-size: 1rem;
     }
 
-    .history_text::before {
+    &::before {
         content: "";
         position: absolute;
         width: 15px;
         height: 15px;
         border-radius: 25px;
         background-color: #000000;
-        left: 2%;
+        left: 5px;
         top: 15%;
     }
 }
@@ -76,7 +76,7 @@ export default {
             width: 280px;
         }
 
-        .history_text::before {
+        &::before {
             width: 10px;
             height: 10px;
         }

@@ -28,6 +28,18 @@ export default {
         }
     },
     methods: {
+        serviceIconAnimation(target) {
+            const option = {
+                threshold: 0.5
+            };
+            const callback = (entries, observer) => {
+                if (entries[0].isIntersecting) {
+                    target.classList.add("anime");
+                }
+            };
+            const observer = new IntersectionObserver(callback, option);
+            observer.observe(target);
+        },
     },
     components: {
         HomeBanner,
@@ -40,7 +52,8 @@ export default {
         RouterView
     },
     mounted() {
-
+        this.serviceIconAnimation(document.querySelector(".analyticsBlock"))
+        this.serviceIconAnimation(document.querySelector(".achievement"))
     }
 }
 </script>
@@ -88,7 +101,7 @@ export default {
     .homeView_title {
         width: 15vw;
         height: 7vh;
-        margin-left: 45%;
+        margin: 0 auto;
     }
 
     .analyticsBlock {
@@ -99,7 +112,18 @@ export default {
         margin-top: 5%;
         margin-left: 16%;
         overflow-wrap: initial;
+        opacity: 0;
+        transition-property: filter, opacity, transform;
+        transition-duration: 2s;
+        transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+        filter: blur(0);
+        transform: translateY(20px);
     }
+
+    .anime {
+            opacity: 1;
+            transform: translateZ(0);
+        }
 
     .achievement {
         margin-top: 5%;
@@ -143,9 +167,39 @@ export default {
             margin-bottom: 8%;
         }
 
+
         .analyticsBlock {
-            gap: 20px;
-            margin-left: 6%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            margin-bottom: 5%;
+            overflow-wrap: initial;
+            width: 120px;
+            gap: 0px;
+
+            .analytics_block:nth-child(4) {
+                display: none;
+            }
+
+            .analytics_block:nth-child(5) {
+                display: none;
+            }
+
+            .analytics_block:nth-child(6) {
+                display: none;
+            }
+
+            .analytics_block:nth-child(7) {
+                display: none;
+            }
+
+            .analytics_block:nth-child(8) {
+                display: none;
+            }
+
+            .analytics_block:nth-child(9) {
+                display: none;
+            }
         }
 
         .achievement {
@@ -153,13 +207,16 @@ export default {
             margin-bottom: 10%;
             font-size: 0.6rem;
         }
-        .serviceIcon{
+
+        .serviceIcon {
             height: 700px;
         }
-        .wechat{
+
+        .wechat {
             height: 60vh;
         }
-        .news{
+
+        .news {
             height: 40vh;
         }
     }
@@ -180,12 +237,18 @@ export default {
             margin-left: 5%;
         }
 
+        .news {
+            width: 100vw;
+            height: 40vh;
+        }
+
         .serviceIcon {
             height: 50vh;
         }
+
         .achievement {
-        font-size: 1.2rem;
-    }
+            font-size: 1.2rem;
+        }
     }
 }
 </style>

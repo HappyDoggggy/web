@@ -1,25 +1,55 @@
 <script>
+export default {
+    //語法糖
+    name: 'Home',
+    data() { // data = funtion(){}
+        return {
+        }
+    },
+    methods: {
+        serviceIconAnimation(target) {
+        const option = {
+            threshold: 0.5
+        };
+        const callback = (entries, observer) => {
+            if (entries[0].isIntersecting) {
+                target.classList.add("anime");
+            }
+        };
+        const observer = new IntersectionObserver(callback, option);
+        observer.observe(target);
+    },
+    },
+    components: {
+    },
+    mounted() {
+        this.serviceIconAnimation(document.querySelector(".homeBanner_main_title"))
+        this.serviceIconAnimation(document.querySelector(".homeBanner_main_title_en"))
+        this.serviceIconAnimation(document.querySelector(".homeBanner_main_content1"))
+        this.serviceIconAnimation(document.querySelector(".homeBanner_main_content2"))
+    }
+}
 </script>
 
 <template>
     <div class="homeBanner_main">
         <div class="homeBanner_main_block">
-            <p class="homeBanner_main_Text1 text">THE BEST</p>
-            <p class="homeBanner_main_Text2 text">ONE-STOP SERVICE.</p>
+            <p class="homeBanner_main_Text1 text enWord">THE BEST</p>
+            <p class="homeBanner_main_Text2 text enWord">ONE-STOP SERVICE.</p>
         </div>
         <div class="homeBanner_mainPic">
             <img src="../../public/home.jpg" alt="">
         </div>
         <div class="homeBanner_main_info_block">
             <p class="homeBanner_main_title">おもてなし</p>
-            <p class="homeBanner_main_title_en">hospitality</p>
+            <p class="homeBanner_main_title_en enWord">hospitality</p>
             <p class="homeBanner_main_content1">私たちが目指すのは、お客様に感動を提供し、社会の発展に貢献できる企業です。</p>
             <p class="homeBanner_main_content2">私たちは外国人向けの不動産を提供するインバウンド不動産を盛り上げ、お客様と関連事業者とＹＡＫのwin- win -win
                 関係を構築していきたいです。</p>
             <div class="homeBanner_link_block">
                 <div class="homeBanner_link_text_block">
                     <p class="homeBanner_link_text">会社案内</p>
-                    <p class="homeBanner_link_text_en">ABOUT US</p>
+                    <p class="homeBanner_link_text_en enWord">ABOUT US</p>
                 </div>
                 <i class="fa-solid fa-circle-arrow-right"></i>
             </div>
@@ -100,12 +130,24 @@
             font-weight: bold;
             margin-top: 10%;
             margin-left: 5%;
+            opacity: 0;
+            transition-property: filter, opacity, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+            filter: blur(0);
+            transform: translateY(20px);
         }
 
         .homeBanner_main_title_en {
             font-size: 0.9rem;
             margin-left: 6%;
             margin-top: -1%;
+            opacity: 0;
+            transition-property: filter, opacity, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+            filter: blur(0);
+            transform: translateY(20px);
         }
 
         .homeBanner_main_content1 {
@@ -113,6 +155,12 @@
             margin-top: 4%;
             margin-left: 6%;
             margin-right: 10%;
+            opacity: 0;
+            transition-property: filter, opacity, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+            filter: blur(0);
+            transform: translateY(20px);
         }
 
         .homeBanner_main_content2 {
@@ -120,6 +168,17 @@
             margin-top: 4%;
             margin-left: 6%;
             margin-right: 10%;
+            opacity: 0;
+            transition-property: filter, opacity, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+            filter: blur(0);
+            transform: translateY(20px);
+        }
+
+        .anime {
+            opacity: 1;
+            transform: translateZ(0);
         }
 
         .homeBanner_link_block {

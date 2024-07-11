@@ -75,26 +75,32 @@ export default {
     }
 
 @media screen and (min-width: 300px) and (max-width: 430px){
+
+    .analytics_block{
+        width: 100%;
+        height: 100px;
+    }
     .analytics_title{
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
     .analytics_title_en{
-        font-size: 0.2rem;
+        font-size: 0.5rem;
     }
     .analytics_data_block{
         margin-left: 25px;
         .analytics_data{
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         .analytics_unit_block{
             position: absolute;
             right: 15px;
-            top: 8px;
+            top: 0px;
             .analytics_unit{
-                font-size: 0.4rem;
+                font-size: 0.7rem;
+                margin-top: 0;
             }
             .analytics_unit_up{
-                font-size: 0.33rem;
+                font-size: 0.5rem;
             }
         }
     }

@@ -59,8 +59,25 @@ export default {
             ]
         }
     },
-    methods: {},
-    mounted() { }
+    methods: {
+        serviceIconAnimation(target) {
+            const option = {
+                threshold: 0.5
+            };
+            const callback = (entries, observer) => {
+                if (entries[0].isIntersecting) {
+                    target.classList.add("anime");
+                }
+            };
+            const observer = new IntersectionObserver(callback, option);
+            observer.observe(target);
+        },
+    },
+    mounted() {
+        this.serviceIconAnimation(document.querySelector(".aboutUs_serviceInfo_block"))
+        this.serviceIconAnimation(document.querySelector(".aboutUs_serviceInfo_block_two"))
+        this.serviceIconAnimation(document.querySelector(".history_content"))
+    },
 }
 </script>
 <template>
@@ -102,9 +119,8 @@ export default {
                 <h1>HISTORY</h1>
             </div>
             <div class="history_content">
-                <div class="history" v-for="(item, index) in historyList" :key="index">
-                    <History :history_time="item.history_time" :history_text="item.history_text" />
-                </div>
+                <History v-for="(item, index) in historyList" :history_time="item.history_time"
+                    :history_text="item.history_text" />
             </div>
         </div>
         <div class="serviceIcon">
@@ -144,6 +160,11 @@ export default {
         margin-left: 16%;
         margin-top: 5%;
         margin-bottom: 3%;
+        opacity: 0;
+        transition-property: filter, opacity, transform;
+        transition-duration: 2s;
+        transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+        filter: blur(0);
 
         .aboutUs_serviceInfo {
             margin-left: 5%;
@@ -157,6 +178,16 @@ export default {
         white-space: nowrap;
         margin-bottom: 10%;
         z-index: 2;
+        opacity: 0;
+        transition-property: filter, opacity, transform;
+        transition-duration: 2s;
+        transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+        filter: blur(0);
+    }
+
+    .anime {
+        opacity: 1;
+        transform: translateZ(0);
     }
 
     .outline_main {
@@ -215,6 +246,7 @@ export default {
         width: 100vw;
         height: 60vh;
         display: flex;
+        position: relative;
 
         .history_title {
             width: 15%;
@@ -229,23 +261,34 @@ export default {
             }
         }
 
-        .history_title::before {
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: 50%;
-            background-color: #c5c5c5;
-            left: 251px;
-            top: 2565px;
-        }
-
         .history_content {
             width: 80%;
             margin-top: 3%;
+            position: relative;
+            opacity: 0;
+            transition-property: filter, opacity, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
+            filter: blur(0);
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 70%;
+                background-color: #c5c5c5;
+                left: 12px;
+                top: 0px;
+            }
 
             .history {
                 margin-top: 3%;
             }
+        }
+
+        .anime {
+            opacity: 1;
+            transform: translateZ(0);
         }
     }
 
@@ -258,6 +301,15 @@ export default {
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .aboutUs {
+        .banner {
+            height: 37.3vh;
+        }
+
+        .mainInfo {
+            height: 470px;
+            margin-bottom: 0;
+        }
+
         .aboutUs_serviceInfo_block {
             display: block;
             margin-left: 20%;
@@ -273,11 +325,11 @@ export default {
         .outline_main {
             height: 35vh;
 
-            .outline_mainTitle::after {
+            &::after {
                 width: 20px;
                 height: 20px;
                 left: 320px;
-                top: 190.5%;
+                top: -9px;
             }
 
             .outline_mainTitle {
@@ -287,11 +339,11 @@ export default {
                 }
             }
 
-            .outline_mainTitle::before {
+            &::before {
                 width: 1px;
                 height: 180px;
                 left: 50px;
-                top: 191.5%;
+                top: 0;
             }
         }
 
@@ -306,12 +358,13 @@ export default {
                 }
             }
 
-            .history_title::before {
-                width: 1px;
-                height: 150px;
-                left: 52px;
-                bottom: 0;
-                top: 230%;
+            .history_content {
+                &::before {
+                    bottom: 0;
+                    left: 9px;
+                    top: 0px;
+                    height: 23dvh;
+                }
             }
 
         }
@@ -325,6 +378,10 @@ export default {
 //平板
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .aboutUs {
+        .banner {
+            height: 49.9vh;
+        }
+
         .mainInfo {
             height: 50vh;
         }
@@ -345,18 +402,13 @@ export default {
         .history_main {
             height: 38dvh;
 
-            .history_title::before {
-                bottom: 0;
-                left: 17.25%;
-                top: 215%;
-                height: 26dvh;
-            }
-
-            .history_title::after {
-                width: 40px;
-                height: 40px;
-                left: 80%;
-                top: 110.5%;
+            .history_content {
+                &::before {
+                    bottom: 0;
+                    left: 11px;
+                    top: 0px;
+                    height: 23dvh;
+                }
             }
         }
 
@@ -366,5 +418,4 @@ export default {
     }
 
 }
-
 </style>

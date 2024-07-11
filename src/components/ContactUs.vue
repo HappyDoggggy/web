@@ -53,6 +53,7 @@
         border: 0px;
         color: white;
         margin-top: 45px;
+        cursor: pointer;
     }
 }
 

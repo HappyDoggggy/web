@@ -15,7 +15,7 @@ export default {
 <template>
     <div class="service">
         <div class="title">
-            <h2 class="one text">SERVICE</h2>
+            <h2 class="one text enWord">SERVICE</h2>
             <p class="two text">サービズ</p>
         </div>
         <div class="serviceIcon">
@@ -98,7 +98,7 @@ export default {
         }
         .serviceIcon {
             display: block;
-            padding-left: 25%;
+            padding-left: 26%;
             .icon{
                 width: 180px;
                 height: 180px;
