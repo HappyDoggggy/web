@@ -59,7 +59,7 @@ export default {
 
 <style scoped lang="scss">
 .realestate {
-    width: 100vw;
+    width: 100%;
 
     .banner {
         width: 100vw;

@@ -116,18 +116,19 @@ export default {
 
 <style scoped lang="scss">
 .visa {
+    width: 100vw;
     .banner {
-        width: 100vw;
+        width: 100%;
         height: 60vh;
     }
 
     .mainInfo {
-        width: 100vw;
+        width: 100%;
         height: 70vh;
     }
 
     .pictureIntro {
-        width: 100vw;
+        width: 100%;
         height: 80vh;
     }
 
@@ -193,12 +194,12 @@ export default {
     }
 
     .pictureIntroTwo {
-        width: 100vw;
+        width: 100%;
         height: 80vh;
     }
 
     .pictureIntro_three {
-        width: 100vw;
+        width: 100%;
         height: 80vh;
         position: relative;
         margin-top: 20%;
@@ -285,7 +286,7 @@ export default {
     }
 
     .contactUs {
-        width: 100vw;
+        width: 100%;
         height: 40vh;
         margin-top: 15%;
     }
@@ -338,7 +339,7 @@ export default {
         }
 
         .pictureIntroTwo {
-            width: 100vw;
+            width: 100%;
             height: 43vh;
         }
 
@@ -454,6 +455,7 @@ export default {
 
                 .text_content_p1_2 {
                     margin-left: 8%;
+                    width: 630px;
                 }
 
                 .text_content_p2_2 {

@@ -9,7 +9,7 @@ export default {
     methods: {
         serviceIconAnimation(target) {
             const option = {
-                threshold: 0.5
+                threshold: 1
             };
             const callback = (entries, observer) => {
                 if (entries[0].isIntersecting) {

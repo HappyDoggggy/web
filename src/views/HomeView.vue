@@ -91,7 +91,7 @@ export default {
 </template>
 <style scoped lang="scss">
 .homeView {
-    width: 100vw;
+    width: 100%;
 
     .homeBanner {
         width: 100vw;

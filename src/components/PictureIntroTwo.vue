@@ -94,7 +94,6 @@ export default {
         background-color: white;
         border-radius: 20pt;
         position: absolute;
-        // position: relative;
         left: 18%;
         bottom: -20%;
 
@@ -220,7 +219,7 @@ export default {
             bottom: -5%;
 
             &::before {
-                top: 28%;
+                top: 38%;
             }
 
             .content_text_intro_1 {
