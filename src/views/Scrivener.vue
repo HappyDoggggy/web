@@ -117,27 +117,27 @@ export default {
 
 <style scoped lang="scss">
 .scrivener {
-    width: 100%;
+    width: 100vw;
 
     .banner {
-        width: 100vw;
+        width: 100%;
         height: 60vh;
     }
 
     .mainInfo {
-        width: 100vw;
+        width: 100%;
         height: 70vh;
         margin-bottom: 10%;
     }
 
     .pictureIntro {
-        width: 100vw;
+        width: 100%;
         height: 80vh;
     }
 
     .scrivener_serviceInfo_block {
         position: relative;
-        width: 70vw;
+        width: 70%;
         display: flex;
         margin-left: 22%;
         margin-top: 15%;
@@ -150,7 +150,7 @@ export default {
     }
 
     .pictureIntro_two {
-        width: 100vw;
+        width: 100%;
         height: 80vh;
         position: relative;
         margin-top: 10%;
@@ -236,7 +236,7 @@ export default {
 
     .scrivener_serviceInfo_block_two {
         position: relative;
-        width: 70vw;
+        width: 70%;
         display: flex;
         flex-wrap: wrap;
         margin-left: 30%;
@@ -250,7 +250,7 @@ export default {
     }
 
     .contactUs {
-        width: 100vw;
+        width: 100%;
         height: 40vh;
         margin-top: 10%;
     }
@@ -270,7 +270,7 @@ export default {
 
         .scrivener_serviceInfo_block {
             position: relative;
-            width: 70vw;
+            width: 70%;
             display: block;
             margin-left: 22%;
             margin-top: 0;
@@ -319,7 +319,7 @@ export default {
 
         .scrivener_serviceInfo_block_two {
             position: relative;
-            width: 70vw;
+            width: 70%;
             display: block;
             margin-left: 22%;
             margin-top: 45%;
@@ -383,7 +383,7 @@ export default {
         }
 
         .contactUs {
-            width: 100vw;
+            width: 100%;
             height: 40vh;
         }
     }

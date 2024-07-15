@@ -59,34 +59,34 @@ export default {
 
 <style scoped lang="scss">
 .realestate {
-    width: 100%;
+    width: 100vw;
 
     .banner {
-        width: 100vw;
+        width: 100%;
         height: 60vh;
     }
 
     .mainInfo {
-        width: 100vw;
+        width: 100%;
         height: 70vh;
         margin-bottom: 10%;
     }
 
     .realEstate_title {
-        width: 15vw;
+        width: 15%;
         height: 7vh;
         margin-left: 25%;
         margin-top: 5%;
     }
 
     .realEstateIcon {
-        width: 100vw;
+        width: 100%;
         height: 40vh;
         margin-top: 5%;
     }
 
     .contactUs {
-        width: 100vw;
+        width: 100%;
         height: 50vh;
     }
 }
@@ -97,7 +97,7 @@ export default {
             height: 37.3vh;
         }
         .realEstate_title {
-            width: 15vw;
+            width: 15%;
             height: 7vh;
             margin-left: 15%;
             margin-top: 5%;

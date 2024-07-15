@@ -91,15 +91,15 @@ export default {
 </template>
 <style scoped lang="scss">
 .homeView {
-    width: 100%;
+    width: 100vw;
 
     .homeBanner {
-        width: 100vw;
+        width: 100%;
         height: 150vh;
     }
 
     .homeView_title {
-        width: 15vw;
+        width: 15%;
         height: 7vh;
         margin: 0 auto;
     }
@@ -134,23 +134,23 @@ export default {
     }
 
     .serviceIcon {
-        width: 100vw;
+        width: 100%;
         height: 65vh;
         display: flex;
     }
 
     .wechat {
-        width: 100vw;
+        width: 100%;
         height: 60vh;
     }
 
     .news {
-        width: 100vw;
+        width: 100%;
         height: 50vh;
     }
 
     .inquiry {
-        width: 100vw;
+        width: 100%;
         height: 110vh;
     }
 
@@ -159,7 +159,7 @@ export default {
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .homeView {
         .homeBanner {
-            width: 100vw;
+            width: 100%;
             height: 80vh;
         }
 
@@ -226,7 +226,7 @@ export default {
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .homeView {
         .homeBanner {
-            width: 100vw;
+            width: 100%;
             height: 110vh;
         }
 
@@ -239,7 +239,7 @@ export default {
         }
 
         .news {
-            width: 100vw;
+            width: 100%;
             height: 40vh;
         }
 

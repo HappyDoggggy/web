@@ -132,21 +132,21 @@ export default {
 
 <style scoped lang="scss">
 .aboutUs {
-    width: 100%;
+    width: 100vw;
 
     .banner {
-        width: 100vw;
+        width: 100%;
         height: 60vh;
     }
 
     .mainInfo {
-        width: 100vw;
+        width: 100%;
         height: 70vh;
         margin-bottom: 15%;
     }
 
     .aboutUs_title {
-        width: 15vw;
+        width: 15%;
         height: 7vh;
         margin-left: 17%;
         margin-top: 8%;
@@ -154,7 +154,7 @@ export default {
 
     .aboutUs_serviceInfo_block {
         position: relative;
-        width: 70vw;
+        width: 70%;
         display: flex;
         flex-wrap: wrap;
         margin-left: 16%;
@@ -195,7 +195,7 @@ export default {
 
     .outline_main {
         width: 100vw;
-        height: 74vh;
+        height: 74%;
         background-color: #131840;
         display: flex;
         position: relative;
@@ -246,7 +246,7 @@ export default {
     }
 
     .history_main {
-        width: 100vw;
+        width: 100%;
         height: 60vh;
         display: flex;
         position: relative;
@@ -298,7 +298,7 @@ export default {
     }
 
     .serviceIcon {
-        width: 100vw;
+        width: 100%;
         height: 65vh;
     }
 
