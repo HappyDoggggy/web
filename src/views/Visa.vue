@@ -157,6 +157,7 @@ export default {
             transition-duration: 2s;
             transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
             filter: blur(0);
+            transform: translateY(20px);
 
             .visa_workingVisa_text_title_h2 {
                 font-size: 2rem;
@@ -177,6 +178,7 @@ export default {
             transition-duration: 2s;
             transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
             filter: blur(0);
+            transform: translateY(20px);
 
             .visa_workingVisa_text_intro_p2 {
                 margin-top: 3%;
@@ -186,6 +188,7 @@ export default {
         .anime {
             opacity: 1;
             transform: translateZ(0);
+            transform: translateY(0);
         }
     }
 
@@ -235,6 +238,7 @@ export default {
                 transition-duration: 2s;
                 transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
                 filter: blur(0);
+                transform: translateY(20px);
             }
 
 
@@ -247,6 +251,7 @@ export default {
                 transition-duration: 2s;
                 transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
                 filter: blur(0);
+                transform: translateY(20px);
             }
 
             .text_content_p1_2 {
@@ -257,6 +262,7 @@ export default {
                 transition-duration: 2s;
                 transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
                 filter: blur(0);
+                transform: translateY(20px);
             }
 
             .text_content_p2_2 {
@@ -267,11 +273,13 @@ export default {
                 transition-duration: 2s;
                 transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
                 filter: blur(0);
+                transform: translateY(20px);
             }
 
             .anime {
                 opacity: 1;
                 transform: translateZ(0);
+                transform: translateY(0);
             }
         }
     }

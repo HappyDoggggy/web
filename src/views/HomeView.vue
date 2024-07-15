@@ -123,6 +123,7 @@ export default {
     .anime {
             opacity: 1;
             transform: translateZ(0);
+            transform: translateY(0);
         }
 
     .achievement {

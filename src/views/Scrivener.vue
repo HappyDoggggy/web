@@ -146,6 +146,7 @@ export default {
         transition-duration: 2s;
         transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
         filter: blur(0);
+        transform: translateY(20px);
     }
 
     .pictureIntro_two {
@@ -187,6 +188,7 @@ export default {
                 transition-duration: 2s;
                 transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
                 filter: blur(0);
+                transform: translateY(20px);
             }
 
             .text_content_h3 {
@@ -198,6 +200,7 @@ export default {
                 transition-duration: 2s;
                 transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
                 filter: blur(0);
+                transform: translateY(20px);
             }
 
             .text_content_p1 {
@@ -209,6 +212,7 @@ export default {
                 transition-duration: 2s;
                 transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
                 filter: blur(0);
+                transform: translateY(20px);
             }
 
             .text_content_p2 {
@@ -219,11 +223,13 @@ export default {
                 transition-duration: 2s;
                 transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
                 filter: blur(0);
+                transform: translateY(20px);
             }
 
             .anime {
                 opacity: 1;
                 transform: translateZ(0);
+                transform: translateY(0);
             }
         }
     }
@@ -240,6 +246,7 @@ export default {
         transition-duration: 2s;
         transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
         filter: blur(0);
+        transform: translateY(20px);
     }
 
     .contactUs {
@@ -251,6 +258,7 @@ export default {
     .anime {
         opacity: 1;
         transform: translateZ(0);
+        transform: translateY(0);
     }
 }
 

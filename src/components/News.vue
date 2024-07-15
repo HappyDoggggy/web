@@ -121,6 +121,7 @@ export default {
             transition-duration: 2s;
             transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
             filter: blur(0);
+            transform: translateY(20px);
         }
 
         .news_news_date_2{
@@ -129,6 +130,7 @@ export default {
             transition-duration: 2s;
             transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
             filter: blur(0);
+            transform: translateY(20px);
         }
 
         .news_news_date_3{
@@ -137,6 +139,7 @@ export default {
             transition-duration: 2s;
             transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
             filter: blur(0);
+            transform: translateY(20px);
         }
 
         .news_news_info_1{
@@ -145,6 +148,7 @@ export default {
             transition-duration: 2s;
             transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
             filter: blur(0);
+            transform: translateY(20px);
         }
 
         .news_news_info_2{
@@ -153,6 +157,7 @@ export default {
             transition-duration: 2s;
             transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
             filter: blur(0);
+            transform: translateY(20px);
         }
 
         .news_news_info_3{
@@ -161,11 +166,13 @@ export default {
             transition-duration: 2s;
             transition-timing-function: ease, ease, cubic-bezier(.215, .61, .355, 1);
             filter: blur(0);
+            transform: translateY(20px);
         }
 
         .anime {
             opacity: 1;
             transform: translateZ(0);
+            transform: translateY(0);
         }
 
         a {
