@@ -36,7 +36,7 @@ export default {
     margin-right: 22%;
     height: 12vh;
 
-    .serviceInfo_title::before {
+    &::before {
         content: "";
         position: absolute;
         width: 2px;
@@ -65,7 +65,7 @@ export default {
 @media screen and (min-width: 300px) and (max-width: 430px) {
     .serviceInfo {
 
-        .serviceInfo_title::before {
+        &::before {
             height: 70%;
             bottom: 0;
             top: 0;
@@ -85,7 +85,7 @@ export default {
         .serviceInfo_content {
             .serviceInfo_content_p {
                 font-size: 0.5rem;
-                // width: 200px;
+                width: 65vw;
             }
         }
     }
@@ -93,7 +93,7 @@ export default {
 
 @media screen and (min-width: 431px) and (max-width: 1024px) {
     .serviceInfo {
-        .serviceInfo_title::before {
+        &::before {
             content: "";
             position: absolute;
             width: 2px;

@@ -132,8 +132,6 @@ export default {
 
 <style scoped lang="scss">
 .aboutUs {
-    width: 100vw;
-
     .banner {
         width: 100%;
         height: 60vh;
@@ -146,7 +144,7 @@ export default {
     }
 
     .aboutUs_title {
-        width: 15%;
+        width: 15vw;
         height: 7vh;
         margin-left: 17%;
         margin-top: 8%;
@@ -194,8 +192,8 @@ export default {
     }
 
     .outline_main {
-        width: 100vw;
-        height: 74%;
+        width: 100%;
+        height: 70vh;
         background-color: #131840;
         display: flex;
         position: relative;
@@ -419,6 +417,11 @@ export default {
 
         .serviceIcon {
             height: 50vh;
+        }
+
+        .aboutUs_serviceInfo_block {
+            width: 100%;
+            margin-left: 14.5%;
         }
     }
 

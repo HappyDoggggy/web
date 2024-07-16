@@ -117,8 +117,6 @@ export default {
 
 <style scoped lang="scss">
 .scrivener {
-    width: 100vw;
-
     .banner {
         width: 100%;
         height: 60vh;

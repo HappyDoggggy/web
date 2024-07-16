@@ -59,8 +59,6 @@ export default {
 
 <style scoped lang="scss">
 .realestate {
-    width: 100vw;
-
     .banner {
         width: 100%;
         height: 60vh;
