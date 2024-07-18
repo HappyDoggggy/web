@@ -21,8 +21,7 @@ export default {
     },
     data() {
         return {
-            // bannerImage: "../../public/BANNER(ToKyo).png",
-            bannerImage: "../../public/ToKyo.jpg",
+            bannerImage: "../../public/tokyo2.jpg",
             bannerTextOne: 'お客様に感動を提供し、',
             bannerTextTwo: '社会の発展に貢献',
             //

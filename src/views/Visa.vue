@@ -17,7 +17,7 @@ export default {
     },
     data() {
         return {
-            bannerImage: '/visa.jpg',
+            bannerImage: '/visa5.jpg',
             bannerTextOne: 'お客様に感動を提供し、',
             bannerTextTwo: '社会の発展に貢献',
             //
