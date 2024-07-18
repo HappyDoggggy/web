@@ -204,22 +204,23 @@ export default {
     }
 }
 
-@media screen and (min-width: 431px) and (max-width: 1024px) {
+@media screen and (min-width: 431px) and (max-width: 1210px) {
     .content {
         .pic {
             .content_picture {
-                width: 30%;
+                max-width: 100%;
                 height: 50%;
             }
         }
 
         .content_text {
             width: 100%;
-            left: 0;
-            bottom: -5%;
+            position: relative;
+            bottom: 0;
+            left:0;
 
             &::before {
-                top: 38%;
+                top: 25%;
             }
 
             .content_text_intro_1 {
